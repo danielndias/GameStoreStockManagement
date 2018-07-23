@@ -1,0 +1,38 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="GameStockManagement.master.cs" Inherits="GameStoreStockManagement.GameStockManagement" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="title" runat="server">
+        </asp:ContentPlaceHolder>
+    </title>
+    <link href="css/style.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="wrapper">
+            <div class="menu">
+                <ul>
+                    <li><a href="index.aspx">Home</a></li>
+                    <li><a href="addToInventory.aspx">Add Item to Inventory</a></li>
+                    <li><a href="checkInventory.aspx">Check Inventory</a></li>
+                    <li><a href="Sale.aspx">Sale</a></li>
+                    <li><a href="Invoice.aspx">Invoice</a></li>
+                </ul>
+            </div>
+        
+            <div class="content">
+                <asp:ContentPlaceHolder ID="contentbody" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div class="footer">
+                <p>Company Name</p>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

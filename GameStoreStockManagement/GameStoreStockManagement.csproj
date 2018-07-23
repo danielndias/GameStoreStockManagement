@@ -68,12 +68,61 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="addToInventory.aspx" />
+    <Content Include="checkInventory.aspx" />
+    <Content Include="css\style.css" />
+    <Content Include="Invoice.aspx" />
+    <Content Include="Sale.aspx" />
     <Content Include="Web.config" />
+    <Content Include="index.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addToInventory.aspx.cs">
+      <DependentUpon>addToInventory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="addToInventory.aspx.designer.cs">
+      <DependentUpon>addToInventory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="checkInventory.aspx.cs">
+      <DependentUpon>checkInventory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="checkInventory.aspx.designer.cs">
+      <DependentUpon>checkInventory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GameStockManagement.Master.cs">
+      <DependentUpon>GameStockManagement.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GameStockManagement.Master.designer.cs">
+      <DependentUpon>GameStockManagement.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Invoice.aspx.cs">
+      <DependentUpon>Invoice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Invoice.aspx.designer.cs">
+      <DependentUpon>Invoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sale.aspx.cs">
+      <DependentUpon>Sale.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sale.aspx.designer.cs">
+      <DependentUpon>Sale.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="GameStockManagement.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
