@@ -56,3 +56,134 @@ F:\Dropbox\Sheridan\Term4\Web Services Using .NET & C# Programming\Projects\Game
 F:\Dropbox\Sheridan\Term4\Web Services Using .NET & C# Programming\Projects\GameStoreStockManagement\GameStoreStockManagement\obj\Debug\GameStoreStockManagement.csproj.CopyComplete
 F:\Dropbox\Sheridan\Term4\Web Services Using .NET & C# Programming\Projects\GameStoreStockManagement\GameStoreStockManagement\obj\Debug\GameStoreStockManagement.dll
 F:\Dropbox\Sheridan\Term4\Web Services Using .NET & C# Programming\Projects\GameStoreStockManagement\GameStoreStockManagement\obj\Debug\GameStoreStockManagement.pdb
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\GameStoreStockManagement.dll.config
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\GameStoreStockManagement.dll
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\GameStoreStockManagement.pdb
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\csc.exe
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\csc.exe.config
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\csc.rsp
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\csi.exe
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\csi.exe.config
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\csi.rsp
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\Microsoft.Win32.Primitives.dll
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\System.AppContext.dll
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\System.Collections.Immutable.dll
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\System.Console.dll
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\System.Diagnostics.Process.dll
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\System.Diagnostics.StackTrace.dll
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\System.IO.Compression.dll
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\System.IO.FileSystem.dll
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\System.IO.FileSystem.Primitives.dll
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\System.IO.Pipes.dll
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\System.Reflection.Metadata.dll
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\System.Security.AccessControl.dll
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\System.Security.Claims.dll
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\System.Security.Cryptography.Encoding.dll
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\System.Security.Cryptography.Primitives.dll
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\System.Security.Principal.Windows.dll
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\System.Text.Encoding.CodePages.dll
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\System.Threading.Thread.dll
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\System.ValueTuple.dll
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\System.Xml.ReaderWriter.dll
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\System.Xml.XmlDocument.dll
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\System.Xml.XPath.dll
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\System.Xml.XPath.XDocument.dll
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\vbc.exe
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\vbc.exe.config
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\vbc.rsp
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\VBCSCompiler.exe
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\VBCSCompiler.exe.config
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\EntityFramework.dll
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\EntityFramework.SqlServer.dll
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\EntityFramework.xml
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\EntityFramework.SqlServer.xml
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\obj\Debug\GameStoreStockManagement.csprojAssemblyReference.cache
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\obj\Debug\GameStoreStockManagement.csproj.CoreCompileInputs.cache
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\obj\Debug\GameStoreStockManagement.csproj.CopyComplete
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\obj\Debug\GameStoreStockManagement.dll
+F:\_PROG37721 .NET & C# Programming - 1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\obj\Debug\GameStoreStockManagement.pdb
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\GameStoreStockManagement.dll.config
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\GameStoreStockManagement.dll
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\GameStoreStockManagement.pdb
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\csc.exe
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\csc.exe.config
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\csc.rsp
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\csi.exe
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\csi.exe.config
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\csi.rsp
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\Microsoft.Win32.Primitives.dll
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\System.AppContext.dll
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\System.Collections.Immutable.dll
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\System.Console.dll
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\System.Diagnostics.Process.dll
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\System.Diagnostics.StackTrace.dll
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\System.IO.Compression.dll
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\System.IO.FileSystem.dll
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\System.IO.FileSystem.Primitives.dll
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\System.IO.Pipes.dll
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\System.Reflection.Metadata.dll
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\System.Security.AccessControl.dll
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\System.Security.Claims.dll
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\System.Security.Cryptography.Encoding.dll
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\System.Security.Cryptography.Primitives.dll
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\System.Security.Principal.Windows.dll
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\System.Text.Encoding.CodePages.dll
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\System.Threading.Thread.dll
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\System.ValueTuple.dll
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\System.Xml.ReaderWriter.dll
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\System.Xml.XmlDocument.dll
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\System.Xml.XPath.dll
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\System.Xml.XPath.XDocument.dll
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\vbc.exe
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\vbc.exe.config
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\vbc.rsp
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\VBCSCompiler.exe
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\roslyn\VBCSCompiler.exe.config
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\EntityFramework.dll
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\EntityFramework.SqlServer.dll
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\EntityFramework.xml
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\EntityFramework.SqlServer.xml
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\obj\Debug\GameStoreStockManagement.csprojAssemblyReference.cache
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\obj\Debug\GameStoreStockManagement.csproj.CoreCompileInputs.cache
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\obj\Debug\GameStoreStockManagement.csproj.CopyComplete
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\obj\Debug\GameStoreStockManagement.dll
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\obj\Debug\GameStoreStockManagement.pdb
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\obj\Debug\GameStoreStockManagement.Migrations.initCreate.resources
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\obj\Debug\GameStoreStockManagement.csproj.GenerateResource.cache
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\obj\Debug\GameStoreStockManagement.Migrations.update1.resources
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\obj\Debug\GameStoreStockManagement.Migrations.update2.resources
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\obj\Debug\GameStoreStockManagement.Migrations.update3.resources
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\obj\Debug\GameStoreStockManagement.Migrations.update4.resources
+F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\obj\Debug\GameStoreStockManagement.Migrations.update5.resources

@@ -44,7 +44,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -71,7 +79,7 @@
     <Content Include="addToInventory.aspx" />
     <Content Include="checkInventory.aspx" />
     <Content Include="css\style.css" />
-    <Content Include="Invoice.aspx" />
+    <Content Include="InvoiceView.aspx" />
     <Content Include="Sale.aspx" />
     <Content Include="Web.config" />
     <Content Include="index.aspx" />
@@ -91,6 +99,35 @@
     <Compile Include="checkInventory.aspx.designer.cs">
       <DependentUpon>checkInventory.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DataLayerAccess.cs" />
+    <Compile Include="Migrations\201807262003537_initCreate.cs" />
+    <Compile Include="Migrations\201807262003537_initCreate.Designer.cs">
+      <DependentUpon>201807262003537_initCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807262008059_update1.cs" />
+    <Compile Include="Migrations\201807262008059_update1.Designer.cs">
+      <DependentUpon>201807262008059_update1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807262124099_update2.cs" />
+    <Compile Include="Migrations\201807262124099_update2.Designer.cs">
+      <DependentUpon>201807262124099_update2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807262130149_update3.cs" />
+    <Compile Include="Migrations\201807262130149_update3.Designer.cs">
+      <DependentUpon>201807262130149_update3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807262131297_update4.cs" />
+    <Compile Include="Migrations\201807262131297_update4.Designer.cs">
+      <DependentUpon>201807262131297_update4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807262135169_update5.cs" />
+    <Compile Include="Migrations\201807262135169_update5.Designer.cs">
+      <DependentUpon>201807262135169_update5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Game.cs" />
+    <Compile Include="Models\GameGenre.cs" />
+    <Compile Include="Models\GamePlatform.cs" />
     <Compile Include="GameStockManagement.Master.cs">
       <DependentUpon>GameStockManagement.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -98,13 +135,18 @@
     <Compile Include="GameStockManagement.Master.designer.cs">
       <DependentUpon>GameStockManagement.Master</DependentUpon>
     </Compile>
-    <Compile Include="Invoice.aspx.cs">
-      <DependentUpon>Invoice.aspx</DependentUpon>
+    <Compile Include="GameStoreDB.cs" />
+    <Compile Include="Models\Genre.cs" />
+    <Compile Include="Models\InvoiceGame.cs" />
+    <Compile Include="InvoiceView.aspx.cs">
+      <DependentUpon>InvoiceView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Invoice.aspx.designer.cs">
-      <DependentUpon>Invoice.aspx</DependentUpon>
+    <Compile Include="InvoiceView.aspx.designer.cs">
+      <DependentUpon>InvoiceView.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Models\Invoice.cs" />
+    <Compile Include="Models\Platform.cs" />
     <Compile Include="Sale.aspx.cs">
       <DependentUpon>Sale.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -130,6 +172,26 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201807262003537_initCreate.resx">
+      <DependentUpon>201807262003537_initCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807262008059_update1.resx">
+      <DependentUpon>201807262008059_update1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807262124099_update2.resx">
+      <DependentUpon>201807262124099_update2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807262130149_update3.resx">
+      <DependentUpon>201807262130149_update3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807262131297_update4.resx">
+      <DependentUpon>201807262131297_update4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807262135169_update5.resx">
+      <DependentUpon>201807262135169_update5.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
