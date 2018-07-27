@@ -13,8 +13,7 @@ namespace GameStoreStockManagement.Migrations
                     {
                         Id = c.Int(nullable: false, identity: true),
                         GameId = c.Int(nullable: false),
-                        Name = c.String(),
-                        Genre = c.String(),
+                        Genre = c.String(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Game", t => t.GameId)
@@ -26,6 +25,8 @@ namespace GameStoreStockManagement.Migrations
                     {
                         Id = c.Int(nullable: false, identity: true),
                         Title = c.String(nullable: false, maxLength: 50),
+                        Rating = c.String(nullable: false, maxLength: 3),
+                        ReleaseYear = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -35,8 +36,9 @@ namespace GameStoreStockManagement.Migrations
                     {
                         Id = c.Int(nullable: false, identity: true),
                         GameId = c.Int(nullable: false),
-                        Platform = c.String(),
+                        Platform = c.String(nullable: false),
                         Price = c.Double(nullable: false),
+                        InStock = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Game", t => t.GameId)
@@ -50,15 +52,12 @@ namespace GameStoreStockManagement.Migrations
                         InvoiceId = c.Int(nullable: false),
                         Price = c.Double(nullable: false),
                         Item_Id = c.Int(),
-                        Game_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Invoice", t => t.InvoiceId)
+                .ForeignKey("dbo.Invoice", t => t.InvoiceId, cascadeDelete: true)
                 .ForeignKey("dbo.GamePlatform", t => t.Item_Id)
-                .ForeignKey("dbo.Game", t => t.Game_Id)
                 .Index(t => t.InvoiceId)
-                .Index(t => t.Item_Id)
-                .Index(t => t.Game_Id);
+                .Index(t => t.Item_Id);
             
             CreateTable(
                 "dbo.Invoice",
@@ -66,9 +65,9 @@ namespace GameStoreStockManagement.Migrations
                     {
                         Id = c.Int(nullable: false, identity: true),
                         InvoiceDate = c.DateTime(nullable: false),
-                        SubTotal = c.Decimal(nullable: false, precision: 18, scale: 2),
-                        Tax = c.Decimal(nullable: false, precision: 5, scale: 2),
-                        TotalAmount = c.Decimal(nullable: false, precision: 5, scale: 2),
+                        SubTotal = c.Double(nullable: false),
+                        Tax = c.Double(nullable: false),
+                        TotalAmount = c.Double(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -77,7 +76,7 @@ namespace GameStoreStockManagement.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Name = c.String(),
+                        Name = c.String(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -85,12 +84,10 @@ namespace GameStoreStockManagement.Migrations
         
         public override void Down()
         {
-            DropForeignKey("dbo.InvoiceGame", "Game_Id", "dbo.Game");
+            DropForeignKey("dbo.GamePlatform", "GameId", "dbo.Game");
             DropForeignKey("dbo.InvoiceGame", "Item_Id", "dbo.GamePlatform");
             DropForeignKey("dbo.InvoiceGame", "InvoiceId", "dbo.Invoice");
-            DropForeignKey("dbo.GamePlatform", "GameId", "dbo.Game");
             DropForeignKey("dbo.GameGenres", "GameId", "dbo.Game");
-            DropIndex("dbo.InvoiceGame", new[] { "Game_Id" });
             DropIndex("dbo.InvoiceGame", new[] { "Item_Id" });
             DropIndex("dbo.InvoiceGame", new[] { "InvoiceId" });
             DropIndex("dbo.GamePlatform", new[] { "GameId" });

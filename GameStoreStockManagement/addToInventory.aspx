@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/GameStockManagement.Master" AutoEventWireup="true" CodeBehind="addToInventory.aspx.cs" Inherits="GameStoreStockManagement.addToInventory" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="addToInventory.aspx.cs" Inherits="GameStoreStockManagement.addToInventory" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
@@ -47,6 +47,7 @@
             <td>
                 <asp:CustomValidator ID="CustomValidator1" runat="server" ControlToValidate="TxtPriceXBoxOne" Display="Dynamic" ErrorMessage="Price cannot be empty." Font-Italic="True" Font-Size="Small" ForeColor="Red" OnServerValidate="CustomValidator1_ServerValidate" ValidateEmptyText="True" ValidationGroup="ValPlatform"></asp:CustomValidator>
                 <asp:CustomValidator ID="CustomValidator2" runat="server" ControlToValidate="TxtStockXBoxOne" Display="Dynamic" ErrorMessage="Stock cannot be empty." Font-Italic="True" Font-Size="Small" ForeColor="Red" OnServerValidate="CustomValidator2_ServerValidate" ValidationGroup="ValPlatform" ValidateEmptyText="True"></asp:CustomValidator>
+                <asp:CustomValidator ID="CustomValidator15" runat="server" ErrorMessage="CustomValidator" OnServerValidate="CustomValidator15_ServerValidate"></asp:CustomValidator>
             </td>
         </tr>
         <tr>

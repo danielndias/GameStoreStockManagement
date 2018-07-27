@@ -11,6 +11,8 @@ namespace GameStoreStockManagement
     {
         public string ConnectionManager { get; private set; }
 
+        public static GameStoreDB context = new GameStoreDB();
+
         public static List<string> GetGenres()
         {
             string cs = ConfigurationManager.ConnectionStrings["GameStoreDBConnectionString"].ConnectionString;
@@ -54,36 +56,75 @@ namespace GameStoreStockManagement
 
         public static void AddGame(Game game, List<GameGenre> genres, List<GamePlatform> platforms)
         {
-            string cs = ConfigurationManager.ConnectionStrings["GameStoreDBConnectionString"].ConnectionString;
+            Game newGame = new Game();
+            game.Title = game.Title;
 
-            using (SqlConnection con = new SqlConnection(cs))
+            for (int i = 0; i < platforms.Count; i++)
             {
-                SqlCommand cmd = new SqlCommand("INSERT INTO Game VALUES (@Title);SELECT CAST(scope_identity() AS int)", con);
-                con.Open();
+                GamePlatform gp = new GamePlatform();
 
-                cmd.Parameters.AddWithValue("Title", game.Title);
-                int id = Convert.ToInt32(cmd.ExecuteScalar());
+                gp.Platform = platforms[i].Platform;
+                gp.Price = platforms[i].Price;
+                gp.InStock = platforms[i].InStock;
 
-                //int id = GetGameId(cs, game.Title);
-
-                for (int i = 0; i < platforms.Count; i++)
-                {
-                    SqlCommand cmd3 = new SqlCommand("INSERT INTO GamePlatform (Platform, GameId, Price, InStock) VALUES (@Platform,@GameId,@Price,@InStock)", con);
-                    cmd3.Parameters.AddWithValue("Platform", platforms[i].Platform);
-                    cmd3.Parameters.AddWithValue("GameId", id);
-                    cmd3.Parameters.AddWithValue("Price", platforms[i].Price);
-                    cmd3.Parameters.AddWithValue("InStock", platforms[i].InStock);
-                    cmd3.ExecuteNonQuery();
-                }
-
-                for (int i = 0; i < genres.Count; i++)
-                {
-                    SqlCommand cmd4 = new SqlCommand("INSERT INTO GameGenres VALUES (@GameId,@Genre)", con);
-                    cmd4.Parameters.AddWithValue("GameId", id);
-                    cmd4.Parameters.AddWithValue("Genre", genres[i].Genre);
-                    cmd4.ExecuteNonQuery();
-                }
+                game.GamePlatforms.Add(gp);
             }
+
+            for (int i = 0; i < genres.Count; i++)
+            {
+                GameGenre gg = new GameGenre();
+
+                gg.Genre = genres[i].Genre;
+
+                game.GameGenres.Add(gg);
+            }
+
+            context.Games.Add(game);
+            context.SaveChanges();
+        }
+
+        public static void UpdateGame(Game newGame, List<GamePlatform> platforms)
+        {
+            Game oldGame = context.Games
+                .Where(m => m.Id == newGame.Id)
+                .FirstOrDefault();
+
+            oldGame.Title = newGame.Title;
+
+            for (int i = 0; i < platforms.Count; i++)
+            {
+                oldGame.GamePlatforms.Clear();
+
+                oldGame.GamePlatforms[i].Platform = newGame.GamePlatforms[i].Platform;
+                oldGame.GamePlatforms[i].Price = newGame.GamePlatforms[i].Price;
+                oldGame.GamePlatforms[i].InStock = newGame.GamePlatforms[i].InStock;
+            }
+
+            //for (int i = 0; i < genres.Count; i++)
+            //{
+            //    oldGame.GameGenres.Clear();
+            //    oldGame.GameGenres[i].Genre = newGame.GameGenres[i].Genre;
+            //}
+
+            context.SaveChanges();
+        }
+
+        public static void DeleteGame(Game game)
+        {
+            Game Game = context.Games
+                .Where(m => m.Id == game.Id)
+                .FirstOrDefault();
+
+            context.Games.Remove(game);
+
+            context.SaveChanges();
+        }
+
+        public static List<Game> GetGamesWithoutGenre()
+        {
+            return context.Games
+                .Include("GamePlatforms")
+                .ToList();
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="GameStockManagement.master.cs" Inherits="GameStoreStockManagement.GameStockManagement" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="GameStoreStockManagement.GameStockManagement" %>
 
 <!DOCTYPE html>
 

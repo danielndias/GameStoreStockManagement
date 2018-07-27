@@ -100,29 +100,9 @@
       <DependentUpon>checkInventory.aspx</DependentUpon>
     </Compile>
     <Compile Include="DataLayerAccess.cs" />
-    <Compile Include="Migrations\201807262003537_initCreate.cs" />
-    <Compile Include="Migrations\201807262003537_initCreate.Designer.cs">
-      <DependentUpon>201807262003537_initCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807262008059_update1.cs" />
-    <Compile Include="Migrations\201807262008059_update1.Designer.cs">
-      <DependentUpon>201807262008059_update1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807262124099_update2.cs" />
-    <Compile Include="Migrations\201807262124099_update2.Designer.cs">
-      <DependentUpon>201807262124099_update2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807262130149_update3.cs" />
-    <Compile Include="Migrations\201807262130149_update3.Designer.cs">
-      <DependentUpon>201807262130149_update3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807262131297_update4.cs" />
-    <Compile Include="Migrations\201807262131297_update4.Designer.cs">
-      <DependentUpon>201807262131297_update4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807262135169_update5.cs" />
-    <Compile Include="Migrations\201807262135169_update5.Designer.cs">
-      <DependentUpon>201807262135169_update5.cs</DependentUpon>
+    <Compile Include="Migrations\201807272352136_initCreate.cs" />
+    <Compile Include="Migrations\201807272352136_initCreate.Designer.cs">
+      <DependentUpon>201807272352136_initCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Game.cs" />
@@ -174,23 +154,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201807262003537_initCreate.resx">
-      <DependentUpon>201807262003537_initCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807262008059_update1.resx">
-      <DependentUpon>201807262008059_update1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807262124099_update2.resx">
-      <DependentUpon>201807262124099_update2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807262130149_update3.resx">
-      <DependentUpon>201807262130149_update3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807262131297_update4.resx">
-      <DependentUpon>201807262131297_update4.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807262135169_update5.resx">
-      <DependentUpon>201807262135169_update5.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201807272352136_initCreate.resx">
+      <DependentUpon>201807272352136_initCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

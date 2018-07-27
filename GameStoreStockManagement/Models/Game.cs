@@ -11,6 +11,8 @@ namespace GameStoreStockManagement
     {
         public Game()
         {
+            GamePlatforms = new List<GamePlatform>();
+            GameGenres = new List<GameGenre>();
         }
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -19,6 +21,14 @@ namespace GameStoreStockManagement
         [Required]
         [StringLength(50)]
         public string Title { get; set; }
+
+        [Required]
+        [StringLength(3)]
+        public string Rating { get; set; }
+
+        [Required]
+        [Range(1980, 2050, ErrorMessage = "Year must be between 1980 to 2050.")]
+        public int ReleaseYear { get; set; }
 
         public virtual List<GamePlatform> GamePlatforms { get; set; }
 

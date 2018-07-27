@@ -9,6 +9,10 @@ namespace GameStoreStockManagement
     [Table("GamePlatform")]
     public partial class GamePlatform
     {
+        public GamePlatform()
+        {
+        }
+
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 

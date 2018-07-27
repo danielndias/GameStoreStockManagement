@@ -30,8 +30,6 @@ namespace GameStoreStockManagement
                 .HasMany(e => e.GameGenres)
                 .WithRequired(e => e.Game)
                 .WillCascadeOnDelete(false);
-
-
         }
     }
 }

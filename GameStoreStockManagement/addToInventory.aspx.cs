@@ -90,23 +90,25 @@ namespace GameStoreStockManagement
             string txtBoxId = ((CustomValidator)source).ControlToValidate;
             TextBox txtBox = (TextBox)((CustomValidator)source).Parent.FindControl(txtBoxId);
 
-            string id = (txtBox.ID).Substring(8);
-            string chkPlatformId = "Chk" + id;
-            
-            CheckBox chkPlatform = (CheckBox)FindControlRecursive(Panel1, chkPlatformId);
-            if(chkPlatform != null && chkPlatform.Checked)
-            {
-                string txtStockId = "TxtStock" + id;
-                string txtPriceId = "TxtPrice" + id;
+            //string id = (txtBox.ID).Substring(8);
+            //string chkPlatformId = "Chk" + id;
 
-                TextBox txtStock = (TextBox)FindControlRecursive(Panel1, txtStockId);
-                TextBox txtPrice = (TextBox)FindControlRecursive(Panel1, txtPriceId);
+            //CheckBox chkPlatform = (CheckBox)FindControlRecursive(Panel1, chkPlatformId);
+            //if(chkPlatform != null && chkPlatform.Checked)
+            //{
+            //    string txtStockId = "TxtStock" + id;
+            //    string txtPriceId = "TxtPrice" + id;
 
-                return chkPlatform.Checked && !String.IsNullOrEmpty(txtBox.Text) ? true : false;
-            } else
-            {
-                return true;
-            }
+            //    TextBox txtStock = (TextBox)FindControlRecursive(Panel1, txtStockId);
+            //    TextBox txtPrice = (TextBox)FindControlRecursive(Panel1, txtPriceId);
+
+            //    return chkPlatform.Checked && !String.IsNullOrEmpty(txtBox.Text) ? true : false;
+            //} else
+            //{
+            //    return true;
+            //}
+
+            return !String.IsNullOrEmpty(txtBox.Text) ? true : false;
         }
 
         protected bool ChekBoxChecked(object source)
@@ -121,8 +123,15 @@ namespace GameStoreStockManagement
 
             CheckBox chkPlatform = (CheckBox)FindControlRecursive(Panel1, chkPlatformId);
 
-            return chkPlatform != null && chkPlatform.Checked ? true : false;
-
+            if (chkPlatform != null && chkPlatform.Checked && !String.IsNullOrEmpty(txtBox.Text))
+            {
+                return true;
+            }
+            else if (!chkPlatform.Checked && String.IsNullOrEmpty(txtBox.Text))
+            {
+                return false;
+            };
+            return false;
         }
         protected void CustomValidator1_ServerValidate(object source, ServerValidateEventArgs args)
         {
@@ -234,6 +243,11 @@ namespace GameStoreStockManagement
             {
                 args.IsValid = MultipleFieldValidation(source);
             }
+        }
+
+        protected void CustomValidator15_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            args.IsValid = CheckBoxList1.SelectedIndex != -1 ? true : false;
         }
     }
 }
