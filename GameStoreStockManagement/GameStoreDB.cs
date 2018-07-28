@@ -24,12 +24,26 @@ namespace GameStoreStockManagement
             modelBuilder.Entity<Game>()
                 .HasMany(e => e.GamePlatforms)
                 .WithRequired(e => e.Game)
-                .WillCascadeOnDelete(false);
+                .WillCascadeOnDelete(true);
 
             modelBuilder.Entity<Game>()
                 .HasMany(e => e.GameGenres)
                 .WithRequired(e => e.Game)
-                .WillCascadeOnDelete(false);
+                .WillCascadeOnDelete(true);
+
+            modelBuilder.Entity<Invoice>()
+                .HasMany(e => e.InvoiceGames)
+                .WithRequired(e => e.Invoice)
+                .WillCascadeOnDelete(true);
+
+            modelBuilder.Entity<GameGenre>()
+                .HasKey(e => new { e.Id, e.GameId });
+
+            modelBuilder.Entity<GamePlatform>()
+                .HasKey(e => new { e.Id, e.GameId });
+
+            modelBuilder.Entity<InvoiceGame>()
+                .HasKey(e => new { e.Id, e.InvoiceId});
         }
     }
 }

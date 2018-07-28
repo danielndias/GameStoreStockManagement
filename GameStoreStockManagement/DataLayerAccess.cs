@@ -13,6 +13,7 @@ namespace GameStoreStockManagement
 
         public static GameStoreDB context = new GameStoreDB();
 
+
         public static List<string> GetGenres()
         {
             string cs = ConfigurationManager.ConnectionStrings["GameStoreDBConnectionString"].ConnectionString;
@@ -54,60 +55,71 @@ namespace GameStoreStockManagement
             return listPlatforms;
         }
 
-        public static void AddGame(Game game, List<GameGenre> genres, List<GamePlatform> platforms)
+        //public static void AddGame(Game game, List<GameGenre> genres, List<GamePlatform> platforms)
+        //{
+        //    Game newGame = new Game();
+        //    game.Title = game.Title;
+
+        //    for (int i = 0; i < platforms.Count; i++)
+        //    {
+        //        GamePlatform gp = new GamePlatform();
+
+        //        gp.Platform = platforms[i].Platform;
+        //        gp.Price = platforms[i].Price;
+        //        gp.InStock = platforms[i].InStock;
+
+        //        game.GamePlatforms.Add(gp);
+        //    }
+
+        //    for (int i = 0; i < genres.Count; i++)
+        //    {
+        //        GameGenre gg = new GameGenre();
+
+        //        gg.Genre = genres[i].Genre;
+
+        //        game.GameGenres.Add(gg);
+        //    }
+
+        //    context.Games.Add(game);
+        //    context.SaveChanges();
+        //}
+
+        public static void AddGame(Game game)
         {
-            Game newGame = new Game();
-            game.Title = game.Title;
-
-            for (int i = 0; i < platforms.Count; i++)
-            {
-                GamePlatform gp = new GamePlatform();
-
-                gp.Platform = platforms[i].Platform;
-                gp.Price = platforms[i].Price;
-                gp.InStock = platforms[i].InStock;
-
-                game.GamePlatforms.Add(gp);
-            }
-
-            for (int i = 0; i < genres.Count; i++)
-            {
-                GameGenre gg = new GameGenre();
-
-                gg.Genre = genres[i].Genre;
-
-                game.GameGenres.Add(gg);
-            }
-
             context.Games.Add(game);
             context.SaveChanges();
         }
 
-        public static void UpdateGame(Game newGame, List<GamePlatform> platforms)
+        public static void UpdateGame(Game newGame)
         {
-            Game oldGame = context.Games
-                .Where(m => m.Id == newGame.Id)
-                .FirstOrDefault();
+            Game oldGame = GetGameByTitle(newGame.Title);
 
             oldGame.Title = newGame.Title;
 
-            for (int i = 0; i < platforms.Count; i++)
+            oldGame.GamePlatforms.Clear();
+            oldGame.GameGenres.Clear();
+            
+            for (int i = 0; i < newGame.GamePlatforms.Count; i++)
             {
-                oldGame.GamePlatforms.Clear();
+                GamePlatform gp = new GamePlatform();
+                gp.Platform = newGame.GamePlatforms[i].Platform;
+                gp.Price = newGame.GamePlatforms[i].Price;
+                gp.InStock = newGame.GamePlatforms[i].InStock;
 
-                oldGame.GamePlatforms[i].Platform = newGame.GamePlatforms[i].Platform;
-                oldGame.GamePlatforms[i].Price = newGame.GamePlatforms[i].Price;
-                oldGame.GamePlatforms[i].InStock = newGame.GamePlatforms[i].InStock;
+                oldGame.GamePlatforms.Add(gp);
             }
 
-            //for (int i = 0; i < genres.Count; i++)
-            //{
-            //    oldGame.GameGenres.Clear();
-            //    oldGame.GameGenres[i].Genre = newGame.GameGenres[i].Genre;
-            //}
+            for (int i = 0; i < newGame.GameGenres.Count; i++)
+            {
+                GameGenre gg = new GameGenre();
+
+                gg.Genre = newGame.GameGenres[i].Genre;
+                oldGame.GameGenres.Add(gg);
+            }
 
             context.SaveChanges();
         }
+
 
         public static void DeleteGame(Game game)
         {
@@ -120,11 +132,29 @@ namespace GameStoreStockManagement
             context.SaveChanges();
         }
 
-        public static List<Game> GetGamesWithoutGenre()
+        public static List<Game> GetGames()
         {
             return context.Games
                 .Include("GamePlatforms")
                 .ToList();
+        }
+
+        public static Game GetGameById(int id)
+        {
+            return context.Games
+                .Include("GamePlatforms")
+                .Include("GameGenres")
+                .Where(m => m.Id == id)
+                .FirstOrDefault();
+        }
+
+        public static Game GetGameByTitle(string title)
+        {
+            return context.Games
+                .Include("GamePlatforms")
+                .Include("GameGenres")
+                .Where(m => m.Title == title)
+                .FirstOrDefault();
         }
     }
 }

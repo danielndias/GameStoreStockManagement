@@ -9,6 +9,8 @@
         </asp:ContentPlaceHolder>
     </title>
     <link href="css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/css/bootstrap.min.css">
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -18,7 +20,7 @@
             <div class="menu">
                 <ul>
                     <li><a href="index.aspx">Home</a></li>
-                    <li><a href="addToInventory.aspx">Add Item to Inventory</a></li>
+                    <li><a href="addToInventory.aspx">Add Game to Inventory</a></li>
                     <li><a href="checkInventory.aspx">Check Inventory</a></li>
                     <li><a href="Sale.aspx">Sale</a></li>
                     <li><a href="InvoiceView.aspx">Invoice</a></li>

@@ -9,9 +9,12 @@ namespace GameStoreStockManagement
 {
     public partial class checkInventory : System.Web.UI.Page
     {
+
+        public List<Game> listGames = DataLayerAccess.GetGames();
+
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
+
     }
 }

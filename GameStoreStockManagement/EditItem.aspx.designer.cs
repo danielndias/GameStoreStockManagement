@@ -10,7 +10,7 @@
 namespace GameStoreStockManagement {
     
     
-    public partial class addToInventory {
+    public partial class EditItem {
         
         /// <summary>
         /// LblTitle control.
@@ -128,15 +128,6 @@ namespace GameStoreStockManagement {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CustomValidator CustomValidator15;
-        
-        /// <summary>
-        /// SqlDataSource1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
         
         /// <summary>
         /// LblPlatform control.

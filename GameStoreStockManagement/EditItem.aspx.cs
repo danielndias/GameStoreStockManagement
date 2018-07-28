@@ -7,27 +7,79 @@ using System.Web.UI.WebControls;
 
 namespace GameStoreStockManagement
 {
-    public partial class addToInventory : System.Web.UI.Page
+    public partial class EditItem : System.Web.UI.Page
     {
-        public List<string> platformNames = new List<string>() { "Playstation3", "Playstation4", "XBoxOne", "XBox360", "Wii", "WiiU", "PC"};
+        public List<string> platformNames = new List<string>() { "Playstation3", "Playstation4", "XBoxOne", "XBox360", "Wii", "WiiU", "PC" };
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if(Request.QueryString["id"] == null)
+            { 
+                Response.Redirect("~/checkInventory.aspx");
+            }
+
+            List<string> genreList = DataLayerAccess.GetGenres();
+
+            if (CheckBoxList1.Items.Count == 0)
+            {
+                for (int i = 0; i < genreList.Count; i++)
+                {
+                    CheckBoxList1.Items.Add(genreList[i]);
+                }
+            }
+
+            if (!IsPostBack)
+            {
+                int id = Convert.ToInt32(Request.QueryString["id"]);
+                Game game = DataLayerAccess.GetGameById(id);
+
+                TxtTitle.Text = game.Title;
+                DdlRating.SelectedValue = game.Rating;
+                TxtYear.Text = game.ReleaseYear.ToString();
+                for (int i = 0; i < game.GameGenres.Count; i++)
+                {
+                    for (int j = 0; j < CheckBoxList1.Items.Count; j++)
+                    {
+                        if (CheckBoxList1.Items[j].Text == game.GameGenres[i].Genre)
+                        {
+                            CheckBoxList1.Items[j].Selected = true;
+                            break;
+                        }
+                    }
+                }
+                for (int i = 0; i < game.GamePlatforms.Count; i++)
+                {
+                    string chkPlatformId = "Chk" + game.GamePlatforms[i].Platform.ToString().Replace(" ", "");
+                    CheckBox chk = (CheckBox)FindControlRecursive(Panel1, chkPlatformId);
+                    chk.Checked = true;
+
+                    string txtPriceId = "TxtPrice" + game.GamePlatforms[i].Platform.ToString().Replace(" ", "");
+                    TextBox txtPrice = (TextBox)FindControlRecursive(Panel1, txtPriceId);
+                    txtPrice.Text = game.GamePlatforms[i].Price.ToString();
+
+                    string txtStockId = "TxtStock" + game.GamePlatforms[i].Platform.ToString().Replace(" ", "");
+                    TextBox txtStock = (TextBox)FindControlRecursive(Panel1, txtStockId);
+                    txtStock.Text = game.GamePlatforms[i].InStock.ToString();
+                }
+            }
+            
         }
 
         protected void BtnSubmit_Click(object sender, EventArgs e)
         {
             Page.Validate("ValPlatform");
-            if(Page.IsValid)
-            { 
+            if (Page.IsValid)
+            {
                 List<GamePlatform> listPlatforms = new List<GamePlatform>();
                 List<GameGenre> listGenres = new List<GameGenre>();
 
+                int id = Convert.ToInt32(Request.QueryString["id"]);
                 Game game = new Game();
 
                 game.Title = TxtTitle.Text;
                 game.Rating = DdlRating.SelectedValue;
                 game.ReleaseYear = Convert.ToInt32(TxtYear.Text);
+
                 for (int i = 0; i < CheckBoxList1.Items.Count; i++)
                 {
                     ListItem chk = CheckBoxList1.Items[i];
@@ -35,7 +87,6 @@ namespace GameStoreStockManagement
                     {
                         GameGenre gg = new GameGenre();
                         gg.Genre = chk.Text;
-                        //listGenres.Add(gg);
                         game.GameGenres.Add(gg);
                     }
                 }
@@ -62,17 +113,16 @@ namespace GameStoreStockManagement
                                 gp.Platform = chk.Text;
                                 gp.Price = Convert.ToInt32(txtPrice.Text);
                                 gp.InStock = Convert.ToInt32(txtStock.Text);
-                                //listPlatforms.Add(gp);
                                 game.GamePlatforms.Add(gp);
                             }
                         }
                     }
                 }
-
-                //DataLayerAccess.AddGame(game, listGenres, listPlatforms);
-                DataLayerAccess.AddGame(game);
-                Response.Redirect("~/addToInventory.aspx");
+               
+                DataLayerAccess.UpdateGame(game);
+                Response.Redirect("~/checkInventory.aspx");
             }
+
         }
 
         private Control FindControlRecursive(Control rootControl, string controlID)
@@ -104,7 +154,7 @@ namespace GameStoreStockManagement
             {
                 return true;
             }
-            else if ((chkPlatform != null && !chkPlatform.Checked && !String.IsNullOrEmpty(txtBox.Text)) 
+            else if ((chkPlatform != null && !chkPlatform.Checked && !String.IsNullOrEmpty(txtBox.Text))
                 || (chkPlatform != null && chkPlatform.Checked && String.IsNullOrEmpty(txtBox.Text)))
             {
                 return false;
@@ -272,5 +322,7 @@ namespace GameStoreStockManagement
         {
             //args.IsValid = IsChekBoxChecked(source);
         }
+
+        
     }
 }

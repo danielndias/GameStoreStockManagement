@@ -79,6 +79,8 @@
     <Content Include="addToInventory.aspx" />
     <Content Include="checkInventory.aspx" />
     <Content Include="css\style.css" />
+    <Content Include="DeleteItem.aspx" />
+    <Content Include="EditItem.aspx" />
     <Content Include="InvoiceView.aspx" />
     <Content Include="Sale.aspx" />
     <Content Include="Web.config" />
@@ -100,9 +102,35 @@
       <DependentUpon>checkInventory.aspx</DependentUpon>
     </Compile>
     <Compile Include="DataLayerAccess.cs" />
+    <Compile Include="DeleteItem.aspx.cs">
+      <DependentUpon>DeleteItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeleteItem.aspx.designer.cs">
+      <DependentUpon>DeleteItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditItem.aspx.cs">
+      <DependentUpon>EditItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditItem.aspx.designer.cs">
+      <DependentUpon>EditItem.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\201807280001123_initCreate.cs" />
     <Compile Include="Migrations\201807280001123_initCreate.Designer.cs">
       <DependentUpon>201807280001123_initCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807281356523_update1.cs" />
+    <Compile Include="Migrations\201807281356523_update1.Designer.cs">
+      <DependentUpon>201807281356523_update1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807281405073_update2.cs" />
+    <Compile Include="Migrations\201807281405073_update2.Designer.cs">
+      <DependentUpon>201807281405073_update2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807281409410_update3.cs" />
+    <Compile Include="Migrations\201807281409410_update3.Designer.cs">
+      <DependentUpon>201807281409410_update3.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Game.cs" />
@@ -156,6 +184,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201807280001123_initCreate.resx">
       <DependentUpon>201807280001123_initCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807281356523_update1.resx">
+      <DependentUpon>201807281356523_update1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807281405073_update2.resx">
+      <DependentUpon>201807281405073_update2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807281409410_update3.resx">
+      <DependentUpon>201807281409410_update3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
