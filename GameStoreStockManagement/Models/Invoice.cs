@@ -9,6 +9,11 @@ namespace GameStoreStockManagement
     [Table("Invoice")]
     public partial class Invoice
     {
+        public Invoice()
+        {
+            InvoiceGames = new List<InvoiceGame>();
+        }
+
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 

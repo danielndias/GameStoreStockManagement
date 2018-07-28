@@ -100,20 +100,20 @@
       <DependentUpon>checkInventory.aspx</DependentUpon>
     </Compile>
     <Compile Include="DataLayerAccess.cs" />
-    <Compile Include="Migrations\201807272352136_initCreate.cs" />
-    <Compile Include="Migrations\201807272352136_initCreate.Designer.cs">
-      <DependentUpon>201807272352136_initCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201807280001123_initCreate.cs" />
+    <Compile Include="Migrations\201807280001123_initCreate.Designer.cs">
+      <DependentUpon>201807280001123_initCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Game.cs" />
     <Compile Include="Models\GameGenre.cs" />
     <Compile Include="Models\GamePlatform.cs" />
-    <Compile Include="GameStockManagement.Master.cs">
-      <DependentUpon>GameStockManagement.Master</DependentUpon>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="GameStockManagement.Master.designer.cs">
-      <DependentUpon>GameStockManagement.Master</DependentUpon>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
     </Compile>
     <Compile Include="GameStoreDB.cs" />
     <Compile Include="Models\Genre.cs" />
@@ -144,7 +144,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="GameStockManagement.Master" />
+    <Content Include="Site.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -154,8 +154,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201807272352136_initCreate.resx">
-      <DependentUpon>201807272352136_initCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201807280001123_initCreate.resx">
+      <DependentUpon>201807280001123_initCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
