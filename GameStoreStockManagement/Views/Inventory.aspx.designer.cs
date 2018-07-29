@@ -10,16 +10,16 @@
 namespace GameStoreStockManagement {
     
     
-    public partial class DeleteItem {
+    public partial class Inventory {
         
         /// <summary>
-        /// LblMessage control.
+        /// LblSearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblMessage;
+        protected global::System.Web.UI.WebControls.Label LblSearch;
         
         /// <summary>
         /// LblTitle control.
@@ -31,21 +31,39 @@ namespace GameStoreStockManagement {
         protected global::System.Web.UI.WebControls.Label LblTitle;
         
         /// <summary>
-        /// LblYear control.
+        /// TxtTitle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblYear;
+        protected global::System.Web.UI.WebControls.TextBox TxtTitle;
         
         /// <summary>
-        /// BtnSubmit control.
+        /// BtbSearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnSubmit;
+        protected global::System.Web.UI.WebControls.Button BtbSearch;
+        
+        /// <summary>
+        /// BtnReset control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnReset;
+        
+        /// <summary>
+        /// LblResult control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblResult;
     }
 }

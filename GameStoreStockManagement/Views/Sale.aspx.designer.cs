@@ -7,7 +7,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-
-
-public partial class InvoiceView {
+namespace GameStoreStockManagement {
+    
+    
+    public partial class Sale {
+    }
 }

@@ -19,9 +19,9 @@
         <div class="wrapper">
             <div class="menu">
                 <ul>
-                    <li><a href="index.aspx">Home</a></li>
-                    <li><a href="addToInventory.aspx">Add Game to Inventory</a></li>
-                    <li><a href="checkInventory.aspx">Check Inventory</a></li>
+                    <li><a href="default.aspx">Home</a></li>
+                    <li><a href="AddGame.aspx">Add Game</a></li>
+                    <li><a href="Inventory.aspx">Inventory</a></li>
                     <li><a href="Sale.aspx">Sale</a></li>
                     <li><a href="InvoiceView.aspx">Invoice</a></li>
                 </ul>

@@ -10,7 +10,7 @@
 namespace GameStoreStockManagement {
     
     
-    public partial class EditItem {
+    public partial class EditGame {
         
         /// <summary>
         /// LblTitle control.
@@ -193,13 +193,22 @@ namespace GameStoreStockManagement {
         protected global::System.Web.UI.WebControls.CustomValidator CustomValidator2;
         
         /// <summary>
-        /// CustomValidator16 control.
+        /// CompareValidator1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CustomValidator CustomValidator16;
+        protected global::System.Web.UI.WebControls.CompareValidator CompareValidator1;
+        
+        /// <summary>
+        /// CompareValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator CompareValidator2;
         
         /// <summary>
         /// ChkXBox360 control.
@@ -247,13 +256,22 @@ namespace GameStoreStockManagement {
         protected global::System.Web.UI.WebControls.CustomValidator CustomValidator4;
         
         /// <summary>
-        /// CustomValidator17 control.
+        /// CompareValidator3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CustomValidator CustomValidator17;
+        protected global::System.Web.UI.WebControls.CompareValidator CompareValidator3;
+        
+        /// <summary>
+        /// CompareValidator4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator CompareValidator4;
         
         /// <summary>
         /// ChkPlaystation3 control.
@@ -301,13 +319,22 @@ namespace GameStoreStockManagement {
         protected global::System.Web.UI.WebControls.CustomValidator CustomValidator6;
         
         /// <summary>
-        /// CustomValidator18 control.
+        /// CompareValidator5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CustomValidator CustomValidator18;
+        protected global::System.Web.UI.WebControls.CompareValidator CompareValidator5;
+        
+        /// <summary>
+        /// CompareValidator6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator CompareValidator6;
         
         /// <summary>
         /// ChkPlaystation4 control.
@@ -355,13 +382,22 @@ namespace GameStoreStockManagement {
         protected global::System.Web.UI.WebControls.CustomValidator CustomValidator8;
         
         /// <summary>
-        /// CustomValidator19 control.
+        /// CompareValidator7 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CustomValidator CustomValidator19;
+        protected global::System.Web.UI.WebControls.CompareValidator CompareValidator7;
+        
+        /// <summary>
+        /// CompareValidator8 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator CompareValidator8;
         
         /// <summary>
         /// ChkWii control.
@@ -409,13 +445,22 @@ namespace GameStoreStockManagement {
         protected global::System.Web.UI.WebControls.CustomValidator CustomValidator10;
         
         /// <summary>
-        /// CustomValidator20 control.
+        /// CompareValidator9 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CustomValidator CustomValidator20;
+        protected global::System.Web.UI.WebControls.CompareValidator CompareValidator9;
+        
+        /// <summary>
+        /// CompareValidator10 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator CompareValidator10;
         
         /// <summary>
         /// ChkWiiU control.
@@ -463,13 +508,22 @@ namespace GameStoreStockManagement {
         protected global::System.Web.UI.WebControls.CustomValidator CustomValidator12;
         
         /// <summary>
-        /// CustomValidator21 control.
+        /// CompareValidator11 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CustomValidator CustomValidator21;
+        protected global::System.Web.UI.WebControls.CompareValidator CompareValidator11;
+        
+        /// <summary>
+        /// CompareValidator12 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator CompareValidator12;
         
         /// <summary>
         /// ChkPC control.
@@ -517,13 +571,22 @@ namespace GameStoreStockManagement {
         protected global::System.Web.UI.WebControls.CustomValidator CustomValidator14;
         
         /// <summary>
-        /// CustomValidator22 control.
+        /// CompareValidator13 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CustomValidator CustomValidator22;
+        protected global::System.Web.UI.WebControls.CompareValidator CompareValidator13;
+        
+        /// <summary>
+        /// CompareValidator14 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator CompareValidator14;
         
         /// <summary>
         /// BtnSubmit control.

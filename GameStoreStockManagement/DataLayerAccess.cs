@@ -11,85 +11,46 @@ namespace GameStoreStockManagement
     {
         public string ConnectionManager { get; private set; }
 
-        public static GameStoreDB context = new GameStoreDB();
+        /// <summary>
+        ///  Context object for linq queries. 
+        /// </summary>
+        private static GameStoreDB _context = new GameStoreDB();
 
-
+        /// <summary>
+        /// Returns all the genres from DB
+        /// </summary>
+        /// <returns></returns>
         public static List<string> GetGenres()
         {
-            string cs = ConfigurationManager.ConnectionStrings["GameStoreDBConnectionString"].ConnectionString;
-
-            List<string> listGenres = new List<string>();
-
-            using (SqlConnection con = new SqlConnection(cs))
-            {
-                SqlCommand cmd = new SqlCommand("SELECT * FROM Genre", con);
-                con.Open();
-
-                SqlDataReader rdr = cmd.ExecuteReader();
-                while (rdr.Read())
-                {
-                    listGenres.Add(rdr["Name"].ToString());
-                }
-            }
-            return listGenres;
+            return _context.Genres
+                .Select(m => m.Name)
+                .ToList();
         }
 
-
+        /// <summary>
+        /// Returns all the platforms from DB
+        /// </summary>
+        /// <returns></returns>
         public static List<string> GetPlatforms()
         {
-            string cs = ConfigurationManager.ConnectionStrings["GameStoreDBConnectionString"].ConnectionString;
-
-            List<string> listPlatforms = new List<string>();
-
-            using (SqlConnection con = new SqlConnection(cs))
-            {
-                SqlCommand cmd = new SqlCommand("SELECT * FROM Platform", con);
-                con.Open();
-
-                SqlDataReader rdr = cmd.ExecuteReader();
-                while (rdr.Read())
-                {
-                    listPlatforms.Add(rdr["Name"].ToString());
-                }
-            }
-            return listPlatforms;
+            return _context.Platforms
+                .Select(m => m.Name)
+                .ToList();
         }
 
-        //public static void AddGame(Game game, List<GameGenre> genres, List<GamePlatform> platforms)
-        //{
-        //    Game newGame = new Game();
-        //    game.Title = game.Title;
-
-        //    for (int i = 0; i < platforms.Count; i++)
-        //    {
-        //        GamePlatform gp = new GamePlatform();
-
-        //        gp.Platform = platforms[i].Platform;
-        //        gp.Price = platforms[i].Price;
-        //        gp.InStock = platforms[i].InStock;
-
-        //        game.GamePlatforms.Add(gp);
-        //    }
-
-        //    for (int i = 0; i < genres.Count; i++)
-        //    {
-        //        GameGenre gg = new GameGenre();
-
-        //        gg.Genre = genres[i].Genre;
-
-        //        game.GameGenres.Add(gg);
-        //    }
-
-        //    context.Games.Add(game);
-        //    context.SaveChanges();
-        //}
-
+        /// <summary>
+        /// Adds a game to DB
+        /// </summary>
+        /// <param name="game"></param>
         public static void AddGame(Game game)
         {
-            context.Games.Add(game);
-            context.SaveChanges();
+            _context.Games.Add(game);
+            _context.SaveChanges();
         }
-
+        /// <summary>
+        /// Updates the game with adding/deleting/updating the related child entries in the DB
+        /// </summary>
+        /// <param name="newGame"></param>
         public static void UpdateGame(Game newGame)
         {
             Game oldGame = GetGameByTitle(newGame.Title);
@@ -117,44 +78,75 @@ namespace GameStoreStockManagement
                 oldGame.GameGenres.Add(gg);
             }
 
-            context.SaveChanges();
+            _context.SaveChanges();
         }
 
-
+        /// <summary>
+        /// Deletes the game and all related child entries from DB
+        /// </summary>
+        /// <param name="game"></param>
         public static void DeleteGame(Game game)
         {
-            Game Game = context.Games
+            Game Game = _context.Games
                 .Where(m => m.Id == game.Id)
                 .FirstOrDefault();
 
-            context.Games.Remove(game);
+            _context.Games.Remove(game);
 
-            context.SaveChanges();
+            _context.SaveChanges();
         }
 
+        /// <summary>
+        /// Returns all the games
+        /// </summary>
+        /// <returns></returns>
         public static List<Game> GetGames()
         {
-            return context.Games
+            return _context.Games
                 .Include("GamePlatforms")
                 .ToList();
         }
 
+        /// <summary>
+        /// Returns a game with ID
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public static Game GetGameById(int id)
         {
-            return context.Games
+            return _context.Games
                 .Include("GamePlatforms")
                 .Include("GameGenres")
                 .Where(m => m.Id == id)
                 .FirstOrDefault();
         }
 
+        /// <summary>
+        /// Returns a game according to the title
+        /// </summary>
+        /// <param name="title"></param>
+        /// <returns></returns>
         public static Game GetGameByTitle(string title)
         {
-            return context.Games
+            return _context.Games
                 .Include("GamePlatforms")
                 .Include("GameGenres")
                 .Where(m => m.Title == title)
                 .FirstOrDefault();
+        }
+
+        /// <summary>
+        /// Returns all the games which title contains the given string 
+        /// </summary>
+        /// <param name="title"></param>
+        /// <returns></returns>
+        public static List<Game> GetGamesByTitle(string title)
+        {
+            return _context.Games
+                .Include("GamePlatforms")
+                .Include("GameGenres")
+                .Where(m => m.Title.ToLower().Contains(title.Trim()))
+                .ToList();
         }
     }
 }

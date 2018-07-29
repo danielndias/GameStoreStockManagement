@@ -18,6 +18,7 @@ namespace GameStoreStockManagement
         public virtual DbSet<InvoiceGame> InvoiceGames { get; set; }
         public virtual DbSet<GameGenre> GameGenres { get; set; }
         public virtual DbSet<Genre> Genres { get; set; }
+        public virtual DbSet<Platform> Platforms { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

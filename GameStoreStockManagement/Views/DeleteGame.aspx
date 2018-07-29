@@ -1,6 +1,7 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="DeleteItem.aspx.cs" Inherits="GameStoreStockManagement.DeleteItem" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="DeleteGame.aspx.cs" Inherits="GameStoreStockManagement.DeleteGame" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
+    Delete Game
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
     </asp:Content>
@@ -13,5 +14,5 @@
     <asp:Label ID="LblYear" runat="server" Text=""><%= "Year: " + game.ReleaseYear %></asp:Label>
     <br />
     <br />
-    <asp:Button ID="BtnSubmit" runat="server" Text="Delete Game" OnClick="BtnSubmit_Click" />
+    <asp:Button ID="BtnSubmit" runat="server" Text="Delete Game" class="btn btn-danger" OnClick="BtnSubmit_Click" />
 </asp:Content>

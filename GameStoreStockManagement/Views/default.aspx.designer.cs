@@ -10,6 +10,6 @@
 namespace GameStoreStockManagement {
     
     
-    public partial class checkInventory {
+    public partial class _default {
     }
 }
