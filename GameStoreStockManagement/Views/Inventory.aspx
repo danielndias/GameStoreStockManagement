@@ -38,36 +38,36 @@
             <% for (int i = 0; i < searchGames.Count; i++)
                 { %>
             <% 
-                string platforms = "";
-                string prices = "";
-                string stocks = "";
+                    string platforms = "";
+                    string prices = "";
+                    string stocks = "";
 
-                for (int j = 0; j < searchGames[i].GamePlatforms.Count; j++)
-                {
-                    platforms += searchGames[i].GamePlatforms[j].Platform + "</br>";
-                    prices += searchGames[i].GamePlatforms[j].Price + "</br>";
-                    stocks += searchGames[i].GamePlatforms[j].InStock + "</br>";
-                }
+                    for (int j = 0; j < searchGames[i].GamePlatforms.Count; j++)
+                    {
+                        platforms += searchGames[i].GamePlatforms[j].Platform + "</br>";
+                        prices += searchGames[i].GamePlatforms[j].Price + "</br>";
+                        stocks += searchGames[i].GamePlatforms[j].InStock + "</br>";
+                    }
 
-                string genres = "";
+                    string genres = "";
 
-                for (int j = 0; j < searchGames[i].GameGenres.Count; j++)
-                {
-                    genres += searchGames[i].GameGenres[j].Genre + "</br>";
-                }
-            %> 
-            <tr>
-                <td><%= searchGames[i].Title %></td>
-                <td><%= searchGames[i].Rating %></td>
-                <td><%= searchGames[i].ReleaseYear %></td>
-                <td><%= platforms %></td>
-                <td><%= prices %></td>
-                <td><%= stocks %></td>
-                <td><%= genres %></td>
+                    for (int j = 0; j < searchGames[i].GameGenres.Count; j++)
+                    {
+                        genres += searchGames[i].GameGenres[j].Genre + "</br>";
+                    }
+                %> 
+                    <tr>
+                        <td><%= searchGames[i].Title %></td>
+                        <td><%= searchGames[i].Rating %></td>
+                        <td><%= searchGames[i].ReleaseYear %></td>
+                        <td><%= platforms %></td>
+                        <td><%= prices %></td>
+                        <td><%= stocks %></td>
+                        <td><%= genres %></td>
             
-                <td><a href="EditItem.aspx?id=<%= listGames[i].Id %>" >Edit</a> </td>
-                <td><a href="DeleteItem.aspx?id=<%= listGames[i].Id %>">Delete</a></td>
-            </tr>
+                        <td><a href="EditItem.aspx?id=<%= listGames[i].Id %>" >Edit</a> </td>
+                        <td><a href="DeleteItem.aspx?id=<%= listGames[i].Id %>">Delete</a></td>
+                    </tr>
             <% }; %>
         </tbody>
         </table>

@@ -148,5 +148,20 @@ namespace GameStoreStockManagement
                 .Where(m => m.Title.ToLower().Contains(title.Trim()))
                 .ToList();
         }
+
+        /// <summary>
+        /// Returns all the games which title and platform contains the given strings
+        /// </summary>
+        /// <param name="title"></param>
+        /// <param name="platform"></param>
+        /// <returns></returns>
+        public static List<GamePlatform> GetGamesPlatform(string title, string platform)
+        {
+            return _context.GamePlatforms
+                .Include("GamePlatforms")
+                .Include("GameGenres")
+                .Where(m => m.Game.Title.ToLower().Contains(title.Trim()) && (m.Platform.ToLower().Contains(title.Trim())))
+                .ToList();
+        }
     }
 }
