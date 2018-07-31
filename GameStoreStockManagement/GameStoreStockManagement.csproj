@@ -91,6 +91,10 @@
     <Compile Include="Migrations\201807290009268_initCreate.Designer.cs">
       <DependentUpon>201807290009268_initCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807311814315_update1.cs" />
+    <Compile Include="Migrations\201807311814315_update1.Designer.cs">
+      <DependentUpon>201807311814315_update1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\AddGame.aspx.cs">
       <DependentUpon>AddGame.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -172,6 +176,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201807290009268_initCreate.resx">
       <DependentUpon>201807290009268_initCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807311814315_update1.resx">
+      <DependentUpon>201807311814315_update1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
