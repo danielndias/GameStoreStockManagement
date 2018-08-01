@@ -20,7 +20,7 @@ namespace GameStoreStockManagement
 
         protected void BtnSearch_Click(object sender, EventArgs e)
         {
-            searchInventory = DataLayerAccess.GetGamesPlatform(TxtGameName.Text, DdlPlatform.Text);
+            searchInventory = DataLayerAccess.GetGamesPlatform(TxtGameName.Text, DdlPlatform.SelectedValue);
             searchResult = (searchInventory.Count > 0) ? "" : "No games found.";
         }
 

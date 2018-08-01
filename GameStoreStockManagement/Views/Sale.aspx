@@ -24,8 +24,8 @@
                 <asp:Label ID="LblPlatform" runat="server" Text="Platform"></asp:Label>
             </td>
             <td>
-                <asp:DropDownList ID="DdlPlatform" runat="server" DataSourceID="SqlDataSource1" DataTextField="Name" DataValueField="Name"></asp:DropDownList>
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:GameStoreDBConnectionString %>" SelectCommand="SELECT [Name] FROM [Platform]"></asp:SqlDataSource>
+                <asp:DropDownList ID="DdlPlatform" runat="server" DataSourceID="SqlDataSource1" DataTextField="Platform" DataValueField="Platform"></asp:DropDownList>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:GameStoreDBConnectionString %>" SelectCommand="SELECT [Platform] FROM [GamePlatform]"></asp:SqlDataSource>
             </td>
             <td>
                 
