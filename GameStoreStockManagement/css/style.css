@@ -74,3 +74,9 @@
     font-size: 22px;
     color: #004040;
 }
+
+.validator {
+    font-style: italic;
+    font-size: small;
+    color: red;
+}

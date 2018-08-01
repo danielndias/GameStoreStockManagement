@@ -9,7 +9,7 @@ namespace GameStoreStockManagement
 {
     public partial class AddGame : System.Web.UI.Page
     {
-        public List<string> platformNames = DataLayerAccess.GetPlatforms();
+        public List<string> platformFieldIds = DataLayerAccess.GetPlatformsFieldIds();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -45,10 +45,10 @@ namespace GameStoreStockManagement
                     if (Panel1.Controls[i] is CheckBox)
                     {
                         // loop through platform names to compare input field id's.
-                        for (int j = 0; j < platformNames.Count; j++)
+                        for (int j = 0; j < platformFieldIds.Count; j++)
                         {
                             // generate the platform based id for comparing with checkbox id
-                            string chkId = "Chk" + platformNames[j];
+                            string chkId = "Chk" + platformFieldIds[j];
                             
                             // get the proper controls from the html
                             CheckBox chk = (CheckBox)Panel1.Controls[i];
@@ -57,14 +57,14 @@ namespace GameStoreStockManagement
                             // then set the values of game object.
                             if (chk != null && chk.ID.Equals(chkId) && chk.Checked)
                             {
-                                string txtPriceId = "TxtPrice" + platformNames[j];
-                                string txtStockId = "TxtStock" + platformNames[j];
+                                string txtPriceId = "TxtPrice" + platformFieldIds[j];
+                                string txtStockId = "TxtStock" + platformFieldIds[j];
                                 TextBox txtPrice = (TextBox)FindControlRecursive(Panel1, txtPriceId);
                                 TextBox txtStock = (TextBox)FindControlRecursive(Panel1, txtStockId);
 
                                 GamePlatform gp = new GamePlatform();
                                 gp.Platform = chk.Text;
-                                gp.Price = Convert.ToInt32(txtPrice.Text);
+                                gp.Price = Convert.ToDouble(txtPrice.Text);
                                 gp.InStock = Convert.ToInt32(txtStock.Text);
                                 game.GamePlatforms.Add(gp);
                             }
@@ -208,6 +208,25 @@ namespace GameStoreStockManagement
         protected void CustomValidator15_ServerValidate(object source, ServerValidateEventArgs args)
         {
             args.IsValid = CheckBoxList1.SelectedIndex != -1 ? true : false;
+        }
+
+        protected void CustomValidator16_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            int platformSelection = 0;
+
+            for (int i = 0; i < platformFieldIds.Count; i++)
+            {
+                string chkId = "Chk" + platformFieldIds[i];
+
+                CheckBox chkBox = (CheckBox)FindControlRecursive(Panel1, chkId);
+                if(chkBox.Checked)
+                {
+                    platformSelection++;
+                }
+            }
+
+            args.IsValid = platformSelection == 0 ? false : true;
+            
         }
     }
 }

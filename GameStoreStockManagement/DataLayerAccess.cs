@@ -31,10 +31,21 @@ namespace GameStoreStockManagement
         /// Returns all the platforms from DB
         /// </summary>
         /// <returns></returns>
-        public static List<string> GetPlatforms()
+        public static List<string> GetPlatformsNames()
         {
             return _context.Platforms
                 .Select(m => m.Name)
+                .ToList();
+        }
+
+        /// <summary>
+        /// Returns all the platform fieldId's from DB
+        /// </summary>
+        /// <returns></returns>
+        public static List<string> GetPlatformsFieldIds()
+        {
+            return _context.Platforms
+                .Select(m => m.FieldId)
                 .ToList();
         }
 

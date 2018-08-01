@@ -40,6 +40,15 @@ namespace GameStoreStockManagement {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
         
         /// <summary>
+        /// RegularExpressionValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
+        
+        /// <summary>
         /// LblRating control.
         /// </summary>
         /// <remarks>
@@ -103,6 +112,15 @@ namespace GameStoreStockManagement {
         protected global::System.Web.UI.WebControls.Label LblGenre;
         
         /// <summary>
+        /// CustomValidator15 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator CustomValidator15;
+        
+        /// <summary>
         /// Panel2 control.
         /// </summary>
         /// <remarks>
@@ -121,15 +139,6 @@ namespace GameStoreStockManagement {
         protected global::System.Web.UI.WebControls.CheckBoxList CheckBoxList1;
         
         /// <summary>
-        /// CustomValidator15 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CustomValidator CustomValidator15;
-        
-        /// <summary>
         /// SqlDataSource1 control.
         /// </summary>
         /// <remarks>
@@ -146,6 +155,15 @@ namespace GameStoreStockManagement {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LblPlatform;
+        
+        /// <summary>
+        /// CustomValidator16 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator CustomValidator16;
         
         /// <summary>
         /// Panel1 control.
@@ -220,6 +238,24 @@ namespace GameStoreStockManagement {
         protected global::System.Web.UI.WebControls.CompareValidator CompareValidator2;
         
         /// <summary>
+        /// RangeValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator RangeValidator2;
+        
+        /// <summary>
+        /// RangeValidator3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator RangeValidator3;
+        
+        /// <summary>
         /// ChkXBox360 control.
         /// </summary>
         /// <remarks>
@@ -281,6 +317,24 @@ namespace GameStoreStockManagement {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CompareValidator CompareValidator4;
+        
+        /// <summary>
+        /// RangeValidator4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator RangeValidator4;
+        
+        /// <summary>
+        /// RangeValidator10 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator RangeValidator10;
         
         /// <summary>
         /// ChkPlaystation3 control.
@@ -346,6 +400,24 @@ namespace GameStoreStockManagement {
         protected global::System.Web.UI.WebControls.CompareValidator CompareValidator6;
         
         /// <summary>
+        /// RangeValidator5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator RangeValidator5;
+        
+        /// <summary>
+        /// RangeValidator11 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator RangeValidator11;
+        
+        /// <summary>
         /// ChkPlaystation4 control.
         /// </summary>
         /// <remarks>
@@ -407,6 +479,24 @@ namespace GameStoreStockManagement {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CompareValidator CompareValidator8;
+        
+        /// <summary>
+        /// RangeValidator6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator RangeValidator6;
+        
+        /// <summary>
+        /// RangeValidator12 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator RangeValidator12;
         
         /// <summary>
         /// ChkWii control.
@@ -472,6 +562,24 @@ namespace GameStoreStockManagement {
         protected global::System.Web.UI.WebControls.CompareValidator CompareValidator10;
         
         /// <summary>
+        /// RangeValidator7 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator RangeValidator7;
+        
+        /// <summary>
+        /// RangeValidator13 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator RangeValidator13;
+        
+        /// <summary>
         /// ChkWiiU control.
         /// </summary>
         /// <remarks>
@@ -535,6 +643,24 @@ namespace GameStoreStockManagement {
         protected global::System.Web.UI.WebControls.CompareValidator CompareValidator12;
         
         /// <summary>
+        /// RangeValidator8 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator RangeValidator8;
+        
+        /// <summary>
+        /// RangeValidator14 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator RangeValidator14;
+        
+        /// <summary>
         /// ChkPC control.
         /// </summary>
         /// <remarks>
@@ -596,6 +722,24 @@ namespace GameStoreStockManagement {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CompareValidator CompareValidator14;
+        
+        /// <summary>
+        /// RangeValidator9 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator RangeValidator9;
+        
+        /// <summary>
+        /// RangeValidator15 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator RangeValidator15;
         
         /// <summary>
         /// BtnSubmit control.

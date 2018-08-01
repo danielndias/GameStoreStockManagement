@@ -18,6 +18,7 @@
     <asp:Button ID="BtbSearch" runat="server" Text="Search" class="btn btn-primary" OnClick="BtbSearch_Click"/>
     <asp:Button ID="BtnReset" runat="server" Text="Reset" class="btn btn-primary" OnClick="BtnReset_Click" />
     <br />
+    <br />
     <% if (searchGames.Count > 0 && String.IsNullOrEmpty(searchResult))
         { %>
         <table class="table table-striped">
@@ -75,8 +76,9 @@
         <asp:Label ID="LblResult" runat="server" Text=""><%= searchResult %></asp:Label>
     <%} else
         { %>
-    <hr />
     <br />
+    <asp:Label ID="LblInventory" runat="server" Text="Inventory" Font-Bold="True" Font-Size="Large"></asp:Label>
+    <hr />
     <table class="table table-striped">
         <thead class="thead-dark">
             <tr>
