@@ -15,5 +15,8 @@
         [Required]
         public string Name { get; set; }
 
+        [Required]
+        public string FieldId { get; set; }
+
     }
 }
