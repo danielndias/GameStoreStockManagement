@@ -158,9 +158,7 @@ namespace GameStoreStockManagement
         public static List<GamePlatform> GetGamesPlatform(string title, string platform)
         {
             return _context.GamePlatforms
-                .Include("GamePlatforms")
-                .Include("GameGenres")
-                .Where(m => m.Game.Title.ToLower().Contains(title.Trim()) && (m.Platform.ToLower().Contains(title.Trim())))
+                .Where(m => m.Game.Title.ToLower().Contains(title.Trim()) && (m.Platform.ToLower().Contains(platform.Trim())))
                 .ToList();
         }
     }

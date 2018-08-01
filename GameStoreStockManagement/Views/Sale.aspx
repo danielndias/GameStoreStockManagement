@@ -24,7 +24,8 @@
                 <asp:Label ID="LblPlatform" runat="server" Text="Platform"></asp:Label>
             </td>
             <td>
-                <asp:DropDownList ID="DdlPlatform" runat="server"></asp:DropDownList>
+                <asp:DropDownList ID="DdlPlatform" runat="server" DataSourceID="SqlDataSource1" DataTextField="Name" DataValueField="Name"></asp:DropDownList>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:GameStoreDBConnectionString %>" SelectCommand="SELECT [Name] FROM [Platform]"></asp:SqlDataSource>
             </td>
             <td>
                 
@@ -69,8 +70,8 @@
                                 <td><%= gp.Platform %></td>
                                 <td><%= gp.Price %></td>
                                 <td><%= gp.InStock %></td>
-                                <td><asp:TextBox ID="<%= "Txt" + (gp.Game.Title + "&"  + gp.Platform) + "qty"  %>" runat="server"></asp:TextBox></td>
-                                <td><asp:Button ID="<%= "Btn" + (gp.Game.Title + "&"  + gp.Platform) %>" OnClick="AddToCart" CommandArgument="<%= (gp.Game.Title + "&"  + gp.Platform) %>" runat="server" Text="Button" /></td>
+                                <td><asp:TextBox runat="server"></asp:TextBox></td>
+                                <td><asp:Button OnClick="AddToCart" runat="server" Text="Button" /></td>
                             </tr>       
                        <%}%>
 

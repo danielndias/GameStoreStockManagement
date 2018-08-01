@@ -23,5 +23,10 @@ namespace GameStoreStockManagement
             searchInventory = DataLayerAccess.GetGamesPlatform(TxtGameName.Text, DdlPlatform.Text);
             searchResult = (searchInventory.Count > 0) ? "" : "No games found.";
         }
+
+        protected void AddToCart(object sender, EventArgs e)
+        {
+
+        }
     }
 }
