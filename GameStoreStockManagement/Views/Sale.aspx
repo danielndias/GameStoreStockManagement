@@ -61,17 +61,22 @@
                         <th></th>
                     </tr>
                 </thead>
+                <p id="test"></p>
                 <tbody>
                     <% for (int i = 0; i < searchInventory.Count; i++)
                        {
-                            gp = searchInventory[i];%>
+                            gp = searchInventory[i];
+                            string qtyId = "qty" + gp.Game.Title + "&" + gp.Platform;
+                            string btnId = "btn" + gp.Game.Title + "&" + gp.Platform;
+                            
+                            %>
                             <tr>
                                 <td><%= gp.Game.Title %></td>
                                 <td><%= gp.Platform %></td>
                                 <td><%= gp.Price %></td>
                                 <td><%= gp.InStock %></td>
-                                <td><asp:TextBox runat="server"></asp:TextBox></td>
-                                <td><asp:Button OnClick="AddToCart" runat="server" Text="Button" /></td>
+                                <td><input type="text" id="<%= qtyId %>"></td>
+                                <td><button id="<%= btnId %>" onclick="createQueryString('<%= qtyId %>')">Add</button></td>
                             </tr>       
                        <%}%>
 

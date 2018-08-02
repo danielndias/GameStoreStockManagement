@@ -249,3 +249,4 @@ C:\Users\Augusto\Dropbox\SHERIDAN\TERM4\C#\ASSIGNMENTS\PROJECT\GameStoreStockMan
 C:\Users\Augusto\Dropbox\SHERIDAN\TERM4\C#\ASSIGNMENTS\PROJECT\GameStoreStockManagement\GameStoreStockManagement\obj\Debug\GameStoreStockManagement.Migrations.update1.resources
 F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\obj\Debug\GameStoreStockManagement.Migrations.update1.resources
 F:\_PROG37721_.NET_C#_Programming_-_1185_45656\Group_Project\GameStoreStockManagement\GameStoreStockManagement\obj\Debug\GameStoreStockManagement.Migrations.update2.resources
+C:\Users\Augusto\Dropbox\SHERIDAN\TERM4\C#\ASSIGNMENTS\PROJECT\GameStoreStockManagement\GameStoreStockManagement\obj\Debug\GameStoreStockManagement.Migrations.update2.resources
