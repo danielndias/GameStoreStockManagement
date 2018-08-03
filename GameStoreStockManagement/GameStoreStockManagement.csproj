@@ -100,6 +100,7 @@
     <Compile Include="Migrations\201808010119463_update2.Designer.cs">
       <DependentUpon>201808010119463_update2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\CartItem.cs" />
     <Compile Include="Views\AddGame.aspx.cs">
       <DependentUpon>AddGame.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -5,6 +5,23 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="contentbody" runat="server">
+
+    <style>
+
+        .resultsTable {
+            margin-top: 20px;
+        }
+
+        .summaryTable {
+            margin-top: 10px;
+            float: right;
+        }
+
+        .summaryTable tr :nth-child(1) {
+            font-weight: bold;
+        }
+    </style>
+    
     <h1>Sale Page</h1>
 
     <table>
@@ -29,63 +46,23 @@
             </td>
             <td>
                 
-            </td>
+                &nbsp;</td>
             
-        </tr>
-        <tr>
-            <td>
-                <asp:Label ID="LblQuantity" runat="server" Text="Quantity"></asp:Label>
-            </td>
-            <td>
-                <asp:TextBox ID="TxtQuantity" runat="server"></asp:TextBox>
-            </td>
-            <td>
-
-            </td>
         </tr>
         <tr>
             <td colspan="3"><asp:Button ID="BtnSearch" runat="server" Text="Search" OnClick="BtnSearch_Click" /></td>
         </tr>
     </table>
 
-    <% if (searchInventory.Count > 0 && String.IsNullOrEmpty(searchResult))
-        { %>
-            <table>
-                <thead class="table table-striped">
-                    <tr>
-                        <th>Title</th>
-                        <th>Platform</th>
-                        <th>Unit Price</th>
-                        <th>Stock</th>
-                        <th>Quantity</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <p id="test"></p>
-                <tbody>
-                    <% for (int i = 0; i < searchInventory.Count; i++)
-                       {
-                            gp = searchInventory[i];
-                            string qtyId = "qty" + gp.Game.Title + "&" + gp.Platform;
-                            string btnId = "btn" + gp.Game.Title + "&" + gp.Platform;
-                            
-                            %>
-                            <tr>
-                                <td><%= gp.Game.Title %></td>
-                                <td><%= gp.Platform %></td>
-                                <td><%= gp.Price %></td>
-                                <td><%= gp.InStock %></td>
-                                <td><input type="text" id="<%= qtyId %>"></td>
-                                <td><button id="<%= btnId %>" onclick="createQueryString('<%= qtyId %>')">Add</button></td>
-                            </tr>       
-                       <%}%>
+    <asp:PlaceHolder ID="container" runat="server"></asp:PlaceHolder>
+    <asp:PlaceHolder ID="cartContainer" runat="server"></asp:PlaceHolder>
 
 
+    <br />
+    <asp:Button ID="BtnResetCart" runat="server" Text="Reset Cart" OnClick="BtnResetCart_Click" Visible="False" />
+    <asp:Button ID="BtnCheckout" runat="server" Text="Checkout" OnClick="BtnCheckout_Click" Visible="False" />
 
-                            
-                </tbody>
-            </table>
-      <%} %>
-   
+    <br />
+    <asp:Label ID="LblPurchaseResult" runat="server" Font-Bold="True" ForeColor="#003300"></asp:Label>
 
 </asp:Content>

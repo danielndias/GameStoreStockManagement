@@ -173,5 +173,63 @@ namespace GameStoreStockManagement
                 .Where(m => m.Game.Title.ToLower().Contains(title.Trim()) && (m.Platform.ToLower().Contains(platform.Trim())))
                 .ToList();
         }
+
+        /// <summary>
+        /// Returns the gamePlatform with given id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public static GamePlatform GetGamePlatform(int id)
+        {
+            return _context.GamePlatforms
+                .Include("Game")
+                .Where(m => m.Id == id)
+                .FirstOrDefault();
+        }
+
+        /// <summary>
+        /// Adds an invoice to DB
+        /// </summary>
+        /// <param name="invoice"></param>
+        public static void AddInvoice(Invoice invoice)
+        {
+            _context.Invoices.Add(invoice);
+            _context.SaveChanges();
+        }
+
+        /// <summary>
+        /// Adds an invoiceGame to DB
+        /// </summary>
+        /// <param name="invoiceGame"></param>
+        public static void AddInvoiceGame(InvoiceGame invoiceGame)
+        {
+            _context.InvoiceGames.Add(invoiceGame);
+            _context.SaveChanges();
+        }
+
+        /// <summary>
+        /// Returns the last invoice added
+        /// </summary>
+        /// <returns></returns>
+        public static Invoice GetLastInvoice()
+        {
+            return _context.Invoices
+                .OrderByDescending(x => x.Id)
+                .Take(1)
+                .FirstOrDefault();
+        }
+
+        /// <summary>
+        /// Updates the stock of a game
+        /// </summary>
+        /// <param name="gamePlatId"></param>
+        /// <param name="newStock"></param>
+        public static void UpdateStock(int gamePlatId, int newStock)
+        {
+            GamePlatform gp = GetGamePlatform(gamePlatId);
+            gp.InStock = newStock;
+
+            _context.SaveChanges();
+        }
     }
 }
