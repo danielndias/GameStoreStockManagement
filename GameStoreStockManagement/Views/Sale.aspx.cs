@@ -10,24 +10,20 @@ namespace GameStoreStockManagement
 {
     public partial class Sale : System.Web.UI.Page
     {
-        public List<GamePlatform> searchInventory = new List<GamePlatform>();
+        public List<GamePlatform> searchInventory = null;
         public GamePlatform gp = new GamePlatform();
-        public string searchResult = "";
 
-        
         public List<CartItem> cart = null;
 
         private double subTotal = 0;
         private double tax = 0;
         private double total = 0;
 
-
-        //List<CartItem> cart = (HttpContext.Current.Session["Cart"] == null) ? new List<CartItem>() : (List<CartItem>)HttpContext.Current.Session["Cart"];
-
         protected void Page_Load(object sender, EventArgs e)
         {
             LblPurchaseResult.Text = "";
             cart = (List<CartItem>)HttpContext.Current.Session["Cart"];
+            searchInventory = (List<GamePlatform>)Session["searchList"];
 
             // checks if there is already a cart in this user's session
             if (cart == null)
@@ -40,11 +36,21 @@ namespace GameStoreStockManagement
             // if there are items in the cart
             else
             {
-                CreateCartTable(cart);
+                CreateCartTable();
                 BtnCheckout.Visible = true;
                 BtnResetCart.Visible = true;
             }
 
+            if (searchInventory == null)
+            {
+                searchInventory = new List<GamePlatform>();
+            }
+
+            else
+            {
+                CreateSearchTable();
+            }
+            
             ClientScript.GetPostBackEventReference(this, string.Empty);
 
             string targetCtrl = Page.Request.Params.Get("__EVENTTARGET");
@@ -86,13 +92,13 @@ namespace GameStoreStockManagement
 
                 HttpContext.Current.Session["Cart"] = cart;
 
-                CreateCartTable(cart);
+                CreateCartTable();
                 BtnCheckout.Visible = true;
                 BtnResetCart.Visible = true;
             }
         }
 
-        protected void CreateCartTable(List<CartItem> cart)
+        protected void CreateCartTable()
         {
             // erase any previous displayed cart
             cartContainer.Controls.Clear();
@@ -105,7 +111,7 @@ namespace GameStoreStockManagement
             // add header for this table
             var headerRow = new TableHeaderRow
             {
-                CssClass = "thread-dark"
+                CssClass = "thread-dark saleCartHeader"
             };
 
             var nameHeaderCell = new TableCell
@@ -182,13 +188,13 @@ namespace GameStoreStockManagement
                 Label lblUnitPrice = new Label
                 {
                     ID = "lblUnitPriceCart" + idForControls,
-                    Text = cart[i].Item.Price.ToString()
+                    Text = cart[i].Item.Price.ToString("C")
                 };
 
                 Label lblTotal = new Label
                 {
                     ID = "lblTotalCart" + idForControls,
-                    Text = (cart[i].Quantity * cart[i].Item.Price).ToString()
+                    Text = (cart[i].Quantity * cart[i].Item.Price).ToString("C")
                 };
 
                 // add Controls into cells
@@ -211,7 +217,8 @@ namespace GameStoreStockManagement
 
             cartContainer.Controls.AddAt(0, new Label
             {
-                Text = "Items in Cart"
+                Text = "Items in Cart",
+                CssClass = "subtitle"
             });
 
             cartContainer.Controls.AddAt(1, table);
@@ -219,7 +226,7 @@ namespace GameStoreStockManagement
             // create subtotal, tax and total fields
             for(int i = 0; i < cart.Count; i++)
             {
-                subTotal += (cart[i].Item.Price * cart[i].Quantity);
+                subTotal = (cart[i].Item.Price * cart[i].Quantity);
             }
 
             tax = subTotal * 0.13;
@@ -308,10 +315,10 @@ namespace GameStoreStockManagement
             cartContainer.Visible = true;
         }
 
-        protected void BtnSearch_Click(object sender, EventArgs e)
+        protected void CreateSearchTable()
         {
-            searchInventory = DataLayerAccess.GetGamesPlatform(TxtGameName.Text, DdlPlatform.SelectedValue);
-            searchResult = (searchInventory.Count > 0) ? "" : "No games found.";
+            // erase any previous displayed search
+            container.Controls.Clear();
 
             var table = new Table
             {
@@ -321,7 +328,7 @@ namespace GameStoreStockManagement
             // add header for this table
             var headerRow = new TableHeaderRow
             {
-                CssClass = "thread-dark"
+                CssClass = "thread-dark saleSearchHeader"
             };
 
             var nameHeaderCell = new TableCell
@@ -393,7 +400,7 @@ namespace GameStoreStockManagement
                 Label lblPrice = new Label
                 {
                     ID = "lblPrice" + idForControls,
-                    Text = searchInventory[i].Price.ToString()
+                    Text = searchInventory[i].Price.ToString("C")
                 };
 
                 Label lblStock = new Label
@@ -435,11 +442,41 @@ namespace GameStoreStockManagement
 
             container.Controls.AddAt(0, new Label
             {
-                Text = "Search Results"
+                Text = "Search Results",
+                CssClass = "subtitle"
             });
 
             container.Controls.AddAt(1, table);
             container.Visible = true;
+        }
+
+        protected void BtnSearch_Click(object sender, EventArgs e)
+        {
+            if(TxtGameName.Text.Trim() != "")
+            {
+                searchInventory = DataLayerAccess.GetGamesPlatform(TxtGameName.Text.Trim(), DdlPlatform.SelectedValue);
+            }
+
+            else
+            {
+                searchInventory = DataLayerAccess.GetGamesByPlatform(DdlPlatform.SelectedValue);
+            }
+
+            Session["searchList"] = (searchInventory.Count > 0) ? searchInventory : null;
+
+            if(Session["searchList"] != null)
+            {
+                CreateSearchTable();
+            }
+            // if no results found
+            else
+            {
+                container.Controls.Clear();
+                container.Controls.AddAt(0, new Literal
+                {
+                    Text = "No games found. <br /><br />"
+                });
+            }
         }
 
         protected void ValidateAddToCart(int stock, int id, LinkButton btnAdd)

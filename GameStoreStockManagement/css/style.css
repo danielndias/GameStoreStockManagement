@@ -80,3 +80,12 @@
     font-size: small;
     color: red;
 }
+
+.subtitle {
+    font-size: large;
+    font-weight: bold;
+}
+
+.saleSearchHeader td, .saleCartHeader td {
+    font-weight: bold;
+}

@@ -24,25 +24,25 @@
     
     <h1>Sale Page</h1>
 
-    <table>
+    <table style="margin-bottom: 10px;">
         <tr>
             <td>
-                <asp:Label ID="LblGameName" runat="server" Text="Game Name"></asp:Label>
+                <asp:Label ID="LblGameName" runat="server" Text="Game Name" class="col-md-2 col-form-label"></asp:Label>
             </td>
             <td>
-                <asp:TextBox ID="TxtGameName" runat="server"></asp:TextBox>
+                <asp:TextBox ID="TxtGameName" runat="server" class="form-control"></asp:TextBox>
             </td>
             <td>
                 
-            </td>
+                &nbsp;</td>
         </tr>
         <tr>
             <td>
-                <asp:Label ID="LblPlatform" runat="server" Text="Platform"></asp:Label>
+                <asp:Label ID="LblPlatform" runat="server" Text="Platform" class="col-md-2 col-form-label"></asp:Label>
             </td>
             <td>
-                <asp:DropDownList ID="DdlPlatform" runat="server" DataSourceID="SqlDataSource1" DataTextField="Platform" DataValueField="Platform"></asp:DropDownList>
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:GameStoreDBConnectionString %>" SelectCommand="SELECT [Platform] FROM [GamePlatform]"></asp:SqlDataSource>
+                <asp:DropDownList ID="DdlPlatform" runat="server" DataSourceID="SqlDataSource1" DataTextField="Name" DataValueField="Name" class="form-control"></asp:DropDownList>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:GameStoreDBConnectionString %>" SelectCommand="SELECT [Name] FROM [Platform]"></asp:SqlDataSource>
             </td>
             <td>
                 
@@ -50,7 +50,7 @@
             
         </tr>
         <tr>
-            <td colspan="3"><asp:Button ID="BtnSearch" runat="server" Text="Search" OnClick="BtnSearch_Click" /></td>
+            <td colspan="3"><asp:Button ID="BtnSearch" runat="server" Text="Search" OnClick="BtnSearch_Click" class="btn btn-primary"/></td>
         </tr>
     </table>
 
@@ -59,8 +59,8 @@
 
 
     <br />
-    <asp:Button ID="BtnResetCart" runat="server" Text="Reset Cart" OnClick="BtnResetCart_Click" Visible="False" />
-    <asp:Button ID="BtnCheckout" runat="server" Text="Checkout" OnClick="BtnCheckout_Click" Visible="False" />
+    <asp:Button ID="BtnResetCart" runat="server" Text="Reset Cart" OnClick="BtnResetCart_Click" Visible="False" class="btn btn-primary"/>
+    <asp:Button ID="BtnCheckout" runat="server" Text="Checkout" OnClick="BtnCheckout_Click" Visible="False" class="btn btn-primary"/>
 
     <br />
     <asp:Label ID="LblPurchaseResult" runat="server" Font-Bold="True" ForeColor="#003300"></asp:Label>

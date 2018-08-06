@@ -66,8 +66,8 @@
                         <td><%= stocks %></td>
                         <td><%= genres %></td>
             
-                        <td><a href="EditItem.aspx?id=<%= listGames[i].Id %>" >Edit</a> </td>
-                        <td><a href="DeleteItem.aspx?id=<%= listGames[i].Id %>">Delete</a></td>
+                        <td><a href="EditGame.aspx?id=<%= listGames[i].Id %>" >Edit</a> </td>
+                        <td><a href="DeleteGame.aspx?id=<%= listGames[i].Id %>">Delete</a></td>
                     </tr>
             <% }; %>
         </tbody>
