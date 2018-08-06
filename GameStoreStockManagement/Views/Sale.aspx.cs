@@ -223,10 +223,12 @@ namespace GameStoreStockManagement
 
             cartContainer.Controls.AddAt(1, table);
 
+            subTotal = 0;
+
             // create subtotal, tax and total fields
             for(int i = 0; i < cart.Count; i++)
             {
-                subTotal = (cart[i].Item.Price * cart[i].Quantity);
+                subTotal += (cart[i].Item.Price * cart[i].Quantity);
             }
 
             tax = subTotal * 0.13;
