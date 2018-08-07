@@ -239,5 +239,29 @@ namespace GameStoreStockManagement
 
             _context.SaveChanges();
         }
+
+        /// <summary>
+        /// Returns an invoice
+        /// </summary>
+        /// <returns></returns>
+        public static List<Invoice> GetAllInvoices()
+        {
+            return _context.Invoices
+                .Include("InvoiceGames")
+                .ToList();
+        }
+
+        /// <summary>
+        /// Returns an invoice
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public static Invoice GetInvoice(int id)
+        {
+            return _context.Invoices
+                .Include("InvoiceGames")
+                .Where(m => m.Id == id)
+                .FirstOrDefault();
+        }
     }
 }

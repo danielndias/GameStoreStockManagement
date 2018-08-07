@@ -76,7 +76,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="js\script.js" />
     <Content Include="Views\AddGame.aspx" />
     <Content Include="Views\Inventory.aspx" />
     <Content Include="css\style.css" />

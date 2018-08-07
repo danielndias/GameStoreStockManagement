@@ -89,3 +89,7 @@
 .saleSearchHeader td, .saleCartHeader td {
     font-weight: bold;
 }
+
+#lblSearchInvoice {
+    padding: 10px;
+}

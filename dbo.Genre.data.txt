@@ -1,0 +1,14 @@
+SET IDENTITY_INSERT [dbo].[Genre] ON
+INSERT INTO [dbo].[Genre] ([Id], [Name]) VALUES (1, N'Action')
+INSERT INTO [dbo].[Genre] ([Id], [Name]) VALUES (2, N'Adventure')
+INSERT INTO [dbo].[Genre] ([Id], [Name]) VALUES (3, N'Fighting')
+INSERT INTO [dbo].[Genre] ([Id], [Name]) VALUES (4, N'Platform')
+INSERT INTO [dbo].[Genre] ([Id], [Name]) VALUES (5, N'Puzzle')
+INSERT INTO [dbo].[Genre] ([Id], [Name]) VALUES (6, N'Racing')
+INSERT INTO [dbo].[Genre] ([Id], [Name]) VALUES (7, N'RolePlaying')
+INSERT INTO [dbo].[Genre] ([Id], [Name]) VALUES (8, N'Shooter')
+INSERT INTO [dbo].[Genre] ([Id], [Name]) VALUES (9, N'Simulation')
+INSERT INTO [dbo].[Genre] ([Id], [Name]) VALUES (10, N'Sports')
+INSERT INTO [dbo].[Genre] ([Id], [Name]) VALUES (11, N'Strategy')
+INSERT INTO [dbo].[Genre] ([Id], [Name]) VALUES (12, N'Other')
+SET IDENTITY_INSERT [dbo].[Genre] OFF

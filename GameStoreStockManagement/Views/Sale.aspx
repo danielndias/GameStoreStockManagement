@@ -24,6 +24,8 @@
     
     <h1>Sale Page</h1>
 
+    <asp:Label ID="lblSearchGame" runat="server" Text="Search Game" Font-Bold="True" Font-Size="Large"></asp:Label>
+    <hr />
     <table style="margin-bottom: 10px;">
         <tr>
             <td>

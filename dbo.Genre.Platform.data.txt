@@ -1,0 +1,25 @@
+SET IDENTITY_INSERT [dbo].[Genre] ON
+INSERT INTO [dbo].[Genre] ([Id], [Name]) VALUES (1, N'Action')
+INSERT INTO [dbo].[Genre] ([Id], [Name]) VALUES (2, N'Adventure')
+INSERT INTO [dbo].[Genre] ([Id], [Name]) VALUES (3, N'Fighting')
+INSERT INTO [dbo].[Genre] ([Id], [Name]) VALUES (4, N'Platform')
+INSERT INTO [dbo].[Genre] ([Id], [Name]) VALUES (5, N'Puzzle')
+INSERT INTO [dbo].[Genre] ([Id], [Name]) VALUES (6, N'Racing')
+INSERT INTO [dbo].[Genre] ([Id], [Name]) VALUES (7, N'RolePlaying')
+INSERT INTO [dbo].[Genre] ([Id], [Name]) VALUES (8, N'Shooter')
+INSERT INTO [dbo].[Genre] ([Id], [Name]) VALUES (9, N'Simulation')
+INSERT INTO [dbo].[Genre] ([Id], [Name]) VALUES (10, N'Sports')
+INSERT INTO [dbo].[Genre] ([Id], [Name]) VALUES (11, N'Strategy')
+INSERT INTO [dbo].[Genre] ([Id], [Name]) VALUES (12, N'Other')
+SET IDENTITY_INSERT [dbo].[Genre] OFF
+
+
+SET IDENTITY_INSERT [dbo].[Platform] ON
+INSERT INTO [dbo].[Platform] ([Id], [Name]) VALUES (1, N'XBoxOne')
+INSERT INTO [dbo].[Platform] ([Id], [Name]) VALUES (2, N'XBox360')
+INSERT INTO [dbo].[Platform] ([Id], [Name]) VALUES (3, N'Playstation3')
+INSERT INTO [dbo].[Platform] ([Id], [Name]) VALUES (4, N'Playstation4')
+INSERT INTO [dbo].[Platform] ([Id], [Name]) VALUES (5, N'Wii')
+INSERT INTO [dbo].[Platform] ([Id], [Name]) VALUES (6, N'WiiU')
+INSERT INTO [dbo].[Platform] ([Id], [Name]) VALUES (7, N'PC')
+SET IDENTITY_INSERT [dbo].[Platform] OFF

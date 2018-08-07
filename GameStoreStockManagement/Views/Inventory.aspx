@@ -37,8 +37,7 @@
             </thead>
             <tbody>
             <% for (int i = 0; i < searchGames.Count; i++)
-                { %>
-            <% 
+                { 
                     string platforms = "";
                     string prices = "";
                     string stocks = "";
