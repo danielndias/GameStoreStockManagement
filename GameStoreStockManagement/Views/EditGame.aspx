@@ -25,6 +25,9 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="contentbody" runat="server">
     <h1>Edit Game</h1>
+    <br />
+    <asp:Label ID="LblGame" runat="server" Text="Game Details" Font-Bold="True" Font-Size="Large"></asp:Label>
+    <hr />
     <div class="form-group row">
         <asp:Label ID="LblTitle" runat="server" Text="Title" class="col-sm-2 col-form-label"></asp:Label>
         <div class="col-sm-5">
@@ -56,7 +59,8 @@
     <br />
     <asp:Label ID="LblGenre" runat="server" Text="Select a Genre" Font-Bold="True" Font-Size="Large"></asp:Label>
     &nbsp;
-        <asp:CustomValidator ID="CustomValidator15" class="validator" runat="server" Display="Dynamic" ErrorMessage="Select at least one genre." OnServerValidate="CustomValidator15_ServerValidate" ValidationGroup="ValPlatform"></asp:CustomValidator>
+    <asp:CustomValidator ID="CustomValidator15" class="validator" runat="server" Display="Dynamic" ErrorMessage="Select at least one genre." OnServerValidate="CustomValidator15_ServerValidate" ValidationGroup="ValPlatform"></asp:CustomValidator>
+    <hr />
     <asp:Panel ID="Panel2" runat="server">
     <asp:CheckBoxList ID="CheckBoxList1" runat="server" DataTextField="Name" DataValueField="Name" RepeatDirection="Horizontal" RepeatColumns="7" Height="29px" Width="892px"></asp:CheckBoxList>
     <br />
@@ -65,6 +69,7 @@
     <asp:Label ID="LblPlatform" runat="server" Text="Select a Platform" Font-Bold="True" Font-Size="Large"></asp:Label>
     &nbsp;
     <asp:CustomValidator ID="CustomValidator16" class="validator" runat="server" ErrorMessage="Select at least one platform." OnServerValidate="CustomValidator16_ServerValidate"></asp:CustomValidator>
+    <hr />
     <asp:Panel ID="Panel1" runat="server">
         <table>
             <tr>
@@ -208,5 +213,6 @@
             </tr>
         </table>
     </asp:Panel>
+    <br />
     <asp:Button ID="BtnSubmit" runat="server" Text="Update Game" class="btn btn-primary" OnClick="BtnSubmit_Click" />
 </asp:Content>

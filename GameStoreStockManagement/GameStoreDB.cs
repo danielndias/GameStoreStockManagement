@@ -45,6 +45,9 @@ namespace GameStoreStockManagement
 
             modelBuilder.Entity<InvoiceGame>()
                 .HasKey(e => new { e.Id, e.InvoiceId});
+
+            modelBuilder.Entity<InvoiceGame>()
+                .HasKey(e => new { e.Id, e.ItemId });
         }
     }
 }

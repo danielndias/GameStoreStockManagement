@@ -22,8 +22,8 @@
         }
     </style>
     
-    <h1>Sale Page</h1>
-
+    <h1>Sale</h1>
+    <br>
     <asp:Label ID="lblSearchGame" runat="server" Text="Search Game" Font-Bold="True" Font-Size="Large"></asp:Label>
     <hr />
     <table style="margin-bottom: 10px;">
@@ -33,6 +33,7 @@
             </td>
             <td>
                 <asp:TextBox ID="TxtGameName" runat="server" class="form-control"></asp:TextBox>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" class="validator" runat="server" ErrorMessage="Title can be 50 chars long, and cannot contain special characters.)" ValidationExpression="^[ A-Za-z0-9]{1,50}$" Display="Dynamic" ControlToValidate="TxtGameName"></asp:RegularExpressionValidator>
             </td>
             <td>
                 
@@ -55,7 +56,7 @@
             <td colspan="3"><asp:Button ID="BtnSearch" runat="server" Text="Search" OnClick="BtnSearch_Click" class="btn btn-primary"/></td>
         </tr>
     </table>
-
+    <br />
     <asp:PlaceHolder ID="container" runat="server"></asp:PlaceHolder>
     <asp:PlaceHolder ID="cartContainer" runat="server"></asp:PlaceHolder>
 

@@ -13,7 +13,7 @@ namespace GameStoreStockManagement.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201807290009268_initCreate"; }
+            get { return "201808081230307_initCreate"; }
         }
         
         string IMigrationMetadata.Source

@@ -6,6 +6,7 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="contentbody" runat="server">
     <h1>Invoice</h1>
+    <br />
     <asp:Label ID="lblSearchInvoice" runat="server" Font-Bold="True" Font-Size="Large" Text="Search Invoice"></asp:Label>
     <hr />
     <div class="form-group row">
@@ -32,6 +33,7 @@
                 <th>Invoice #</th>
                 <th>Date</th>
                 <th>Games</th>
+                <th>Platforms</th>
                 <th>Quantity</th>
                 <th>Total</th>
                 <th>Subtotal</th>
@@ -42,12 +44,18 @@
         <tbody>
             <% 
                 string titles = "";
+                string platforms = "";
                 string quantities = "";
                 string subtotal = "";
 
                 for (int j = 0; j < searchInvoice.InvoiceGames.Count; j++)
                 {
                     titles += searchInvoice.InvoiceGames[j].Item.Game.Title + "</br>";
+                }
+
+                for (int j = 0; j < searchInvoice.InvoiceGames.Count; j++)
+                {
+                    platforms += searchInvoice.InvoiceGames[j].Item.Platform + "</br>";
                 }
 
                 for (int j = 0; j < searchInvoice.InvoiceGames.Count; j++)
@@ -64,6 +72,7 @@
                 <td><%= searchInvoice.Id%></td>
                 <td><%= searchInvoice.InvoiceDate %></td>
                 <td><%= titles %></td>
+                <td><%= platforms %></td>
                 <td><%= quantities %></td>
                 <td><%= subtotal %></td>
                 <td><%= searchInvoice.SubTotal.ToString("C") %></td>
@@ -86,6 +95,7 @@
                 <th>Invoice #</th>
                 <th>Date</th>
                 <th>Games</th>
+                <th>Platforms</th>
                 <th>Quantity</th>
                 <th>Total</th>
                 <th>Subtotal</th>
@@ -98,12 +108,18 @@
                 { %>
             <% 
                 string titles = "";
+                string platforms = "";
                 string quantities = "";
                 string subtotals = "";
 
                 for (int j = 0; j < listInvoices[i].InvoiceGames.Count; j++)
                 {
                     titles += listInvoices[i].InvoiceGames[j].Item.Game.Title + "</br>";
+                }
+
+                for (int j = 0; j < listInvoices[i].InvoiceGames.Count; j++)
+                {
+                    platforms += listInvoices[i].InvoiceGames[j].Item.Platform + "</br>";
                 }
 
                 for (int j = 0; j < listInvoices[i].InvoiceGames.Count; j++)
@@ -120,6 +136,7 @@
                 <td><%= listInvoices[i].Id%></td>
                 <td><%= listInvoices[i].InvoiceDate %></td>
                 <td><%= titles %></td>
+                <td><%= platforms %></td>
                 <td><%= quantities %></td>
                 <td><%= subtotals %></td>
                 <td><%= listInvoices[i].SubTotal.ToString("C") %></td>

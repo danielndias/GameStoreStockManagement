@@ -49,12 +49,14 @@ namespace GameStoreStockManagement.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
+                        ItemId = c.Int(nullable: false),
                         InvoiceId = c.Int(nullable: false),
                         Price = c.Double(nullable: false),
+                        QuantitySold = c.Int(nullable: false),
                         Item_Id = c.Int(),
                         Item_GameId = c.Int(),
                     })
-                .PrimaryKey(t => new { t.Id, t.InvoiceId })
+                .PrimaryKey(t => new { t.Id, t.ItemId })
                 .ForeignKey("dbo.Invoice", t => t.InvoiceId, cascadeDelete: true)
                 .ForeignKey("dbo.GamePlatform", t => new { t.Item_Id, t.Item_GameId })
                 .Index(t => t.InvoiceId)
@@ -87,6 +89,7 @@ namespace GameStoreStockManagement.Migrations
                     {
                         Id = c.Int(nullable: false, identity: true),
                         Name = c.String(nullable: false),
+                        FieldId = c.String(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
             

@@ -33,7 +33,7 @@
                 </asp:ContentPlaceHolder>
             </div>
             <div class="footer">
-                <p>Augusto's Game Shop</p>
+                <p>Essos Games</p>
             </div>
         </div>
     </form>

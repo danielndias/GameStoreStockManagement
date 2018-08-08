@@ -5,14 +5,15 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="contentbody" runat="server">
-    <h1>Check Inventory</h1>
-
+    <h1>Inventory</h1>
+    <br />
     <asp:Label ID="LblSearch" runat="server" Text="Search Game" Font-Bold="True" Font-Size="Large"></asp:Label>
     <hr />
     <div class="form-group row">
         <asp:Label ID="LblTitle" runat="server" Text="Title" class="col-sm-2 col-form-label"></asp:Label>
         <div class="col-sm-5">
             <asp:TextBox ID="TxtTitle" runat="server" class="form-control"></asp:TextBox>
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" class="validator" runat="server" ControlToValidate="TxtTitle" ErrorMessage="Title can be 50 chars long, and cannot contain special characters.)" ValidationExpression="^[ A-Za-z0-9]{1,50}$" Display="Dynamic"></asp:RegularExpressionValidator>
         </div>
     </div>
     <asp:Button ID="BtbSearch" runat="server" Text="Search" class="btn btn-primary" OnClick="BtbSearch_Click"/>
@@ -21,6 +22,9 @@
     <br />
     <% if (searchGames.Count > 0 && String.IsNullOrEmpty(searchResult))
         { %>
+         <br />
+        <asp:Label ID="Label1" runat="server" Text="Search Results" Font-Bold="True" Font-Size="Large"></asp:Label>
+        <hr />
         <table class="table table-striped">
             <thead class="thead-dark">
                 <tr>
@@ -45,7 +49,7 @@
                     for (int j = 0; j < searchGames[i].GamePlatforms.Count; j++)
                     {
                         platforms += searchGames[i].GamePlatforms[j].Platform + "</br>";
-                        prices += searchGames[i].GamePlatforms[j].Price + "</br>";
+                        prices += "$" + searchGames[i].GamePlatforms[j].Price + "</br>";
                         stocks += searchGames[i].GamePlatforms[j].InStock + "</br>";
                     }
 
@@ -72,6 +76,9 @@
         </tbody>
         </table>
     <% } else if(searchGames.Count == 0 && !String.IsNullOrEmpty(searchResult)) { %>
+        <br />
+        <asp:Label ID="Label2" runat="server" Text="Search Results" Font-Bold="True" Font-Size="Large"></asp:Label>
+        <hr />
         <asp:Label ID="LblResult" runat="server" Text=""><%= searchResult %></asp:Label>
     <%} else
         { %>
@@ -103,7 +110,7 @@
                 for (int j = 0; j < listGames[i].GamePlatforms.Count; j++)
                 {
                     platforms += listGames[i].GamePlatforms[j].Platform + "</br>";
-                    prices += listGames[i].GamePlatforms[j].Price + "</br>";
+                    prices += "$" + listGames[i].GamePlatforms[j].Price + "</br>";
                     stocks += listGames[i].GamePlatforms[j].InStock + "</br>";
                 }
 

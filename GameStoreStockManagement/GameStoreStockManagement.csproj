@@ -87,17 +87,9 @@
     <Content Include="Views\default.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201807290009268_initCreate.cs" />
-    <Compile Include="Migrations\201807290009268_initCreate.Designer.cs">
-      <DependentUpon>201807290009268_initCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807311814315_update1.cs" />
-    <Compile Include="Migrations\201807311814315_update1.Designer.cs">
-      <DependentUpon>201807311814315_update1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201808010119463_update2.cs" />
-    <Compile Include="Migrations\201808010119463_update2.Designer.cs">
-      <DependentUpon>201808010119463_update2.cs</DependentUpon>
+    <Compile Include="Migrations\201808081230307_initCreate.cs" />
+    <Compile Include="Migrations\201808081230307_initCreate.Designer.cs">
+      <DependentUpon>201808081230307_initCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\CartItem.cs" />
     <Compile Include="Views\AddGame.aspx.cs">
@@ -179,17 +171,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201807290009268_initCreate.resx">
-      <DependentUpon>201807290009268_initCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807311814315_update1.resx">
-      <DependentUpon>201807311814315_update1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201808010119463_update2.resx">
-      <DependentUpon>201808010119463_update2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201808081230307_initCreate.resx">
+      <DependentUpon>201808081230307_initCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

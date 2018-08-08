@@ -21,6 +21,9 @@ namespace GameStoreStockManagement
         [Required]
         public int QuantitySold { get; set; }
 
+        [Required]
+        public int ItemId { get; set; }
+
         public virtual GamePlatform Item { get; set; }
 
         public virtual Invoice Invoice { get; set; }
